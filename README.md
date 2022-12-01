@@ -40,6 +40,8 @@ Considering the budgetary constrains of the client and the hardware requirements
 | Task No | Planned Action                                                | Planned Outcome                                                                                                 | Time estimate | Target completion date | Criterion |
 |---------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
 | 1       | Write the Problem context                        | 10min         | Nov 22                 | A         |
+| 2       | Connect to Rasbperry pi                          | 10min         | Nov 22                 | A         |
+| 1       | Write the Problem context                        | 10min         | Nov 22                 | A         |
 
 ## Test Plan
 
