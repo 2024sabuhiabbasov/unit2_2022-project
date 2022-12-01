@@ -39,9 +39,9 @@ Considering the budgetary constrains of the client and the hardware requirements
 ## Record of Tasks
 | Task No | Planned Action                                                | Planned Outcome                                                                                                 | Time estimate | Target completion date | Criterion |
 |---------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
-| 1       | Write the Problem context                        | 10min         | Nov 22                 | A         |
-| 2       | Connect to Rasbperry pi                          | 10min         | Nov 22                 | A         |
-| 1       | Write the Problem context                        | 10min         | Nov 22                 | A         |
+| 1       | Write the Problem context | To have a clear idea idea on how to solve thw this problem and the best tools for the project                     | 10min         | Nov 22                 | A         |
+| 2       | Connect to Rasbperry pi   |  To start learning how to use the raspeberry pi                      | 30min         | Nov 20                 | C         |
+| 3       | Draw  the system diagram |  To have a clear idea of the hardware and software requirements for the proposal solution                      | 30min         | Nov 22                 | A         |
 
 ## Test Plan
 
