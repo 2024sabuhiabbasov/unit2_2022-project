@@ -44,7 +44,9 @@ Considering the budgetary constrains of the client and the hardware requirements
 | 1       | Write the Problem context | To have a clear idea on how to solve the problem and the best tools for the project                     | 10min         | Nov 22                 | A         |
 | 2       | Connect to Rasbperry pi   |  To start learning how to use the raspeberry pi                      | 30min         | Nov 20                 | C         |
 | 3       | Draw  the system diagram |  To have a clear idea of the hardware and software requirements for the proposal solution                      | 30min         | Nov 23                 | A         |
-| 4 |Code the program to connect the sensor to the raspberry pi | To get the temperature and humidity data | 1 hr | Dec 8| C|
+| 4 |Code the program to get the data | To be able to control and get data from the sensor | 1 hr | Dec 8| C|
+| 5 | Connect the raspberry pi and the sensor | To get temperature and humidity from the sensor | 1hr | Dec 8 | C|
+
 
 ## Test Plan
 
