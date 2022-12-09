@@ -4,7 +4,7 @@
 
 ## Problem definition
 
-In Karuizawa, planting is very popular. Dr. Ruben, who is working at UWC ISAK Japan, is very interested in planting delicate plants. The weather at ISAK is unstable and the rooms are small, but he wants to plant a Monstera which is a famous and expensive plant among plant lovers.This plant is delicate and needs specific conditions to survive, so he wants a program to provide him with the accurate temperature and humidity in his room to know when he needs to turn on the heater/humidifier to create the perfect conditions to the plant to grow appropriately.
+Members of R3-14 house at UWC ISAK Japan in Karuizawa have rescued an injured bird named ‘Peter’. Peter was found on the grass in front of the house unable to fly and can barely walk. The house members think that it is dangerous for Peter to be in the wild if he is still injured, so they are taking responsibility in taking care of Peter in a cardboard box and feeding him nuts. As Peter is recovering, he needs a specific condition of temperature and humidity to live in. Members of the house want a program to provide Peter with the accurate temperature and humidity in the room to be able to correctly control the condition for Peter to live in. 
 
 ## Proposed Solution
 Considering the client requirements an adequate solution includes a low cost sensing device for humidity and temperature and a custom data script that process and anaysis the samples acquired. For a low cost sensing device an adequate alternative is the DHT11 sensor[^1] which is offered online for less than 5 USD and provides adequare precision and range for the client requirements (Temperature Range: 0°C to 50°C, Humidity Range: 20% to 90%). Similar devices such as the DHT22, AHT20 or the AM2301B [^2] have higher specifications, however the DHT11 uses a simple serial communication (SPI) rather than more eleborated protocols such as the I2C used by the alternatives. For the range, precision and accuracy required in this applicaiton the DHT11 provides the best compromise. Connecting the DHT11 sensor to a computer requires a device that provides a Serial Port communication. A cheap and often used alternative for prototyping is the Arduino UNO microcontroller [^3]. "Arduino is an open-source electronics platform based on easy-to-use hardware and software"[^4]. In additon to the low cost of the Arduino (< 6USD), this devide is programable and expandable[^1]. Other alternatives include diffeerent versions of the original Arduino but their size and price make them a less adequate solution.
@@ -46,6 +46,7 @@ Considering the budgetary constrains of the client and the hardware requirements
 | 3       | Draw  the system diagram |  To have a clear idea of the hardware and software requirements for the proposal solution                      | 30min         | Nov 23                 | A         |
 | 4 |Code the program to get the data | To be able to control and get data from the sensor | 1 hr | Dec 8| C|
 | 5 | Connect the raspberry pi and the sensor | To get temperature and humidity from the sensor | 1hr | Dec 8 | C|
+| 
 
 
 ## Test Plan
