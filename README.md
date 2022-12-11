@@ -38,7 +38,8 @@ Considering the budgetary constrains of the client and the hardware requirements
 
 ![smoothing diagram 2](https://user-images.githubusercontent.com/112055062/206912396-769ba45b-c251-4475-8b35-8d0b560dc590.jpg)
 
-**Fig.4** 
+**Fig.4**  The figure shows the flow diagram of a function called “smoothing”. The function is used to smooth out the data which means that the function groups data next to each other according to the size window, finds the average, then puts it into a new list. The function inputs 2 things: the data list, and the size window. Then the mean of data from each window is calculated, and being put back to the list x and y. 
+
 
 ## Test Plan
 | Description | Type | Inputs | Outputs | 
