@@ -26,7 +26,6 @@ Considering the budgetary constrains of the client and the hardware requirements
 # Criteria B: Design
 
 ## System Diagram **HL**
-![image](https://github.com/drPinzonISAK/unit2_2022/raw/main/sysdim_hl.png)
 
 ![system diagram](https://user-images.githubusercontent.com/112055062/206913904-d1f0e476-f0ef-4b45-a7a7-eeb0325c36e1.png)
 
