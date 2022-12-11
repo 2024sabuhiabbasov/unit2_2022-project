@@ -39,6 +39,10 @@ Considering the budgetary constrains of the client and the hardware requirements
 ## Test Plan
 | Description | Type | Inputs | Outputs | 
 | ----------- | ---- | ------ | ------- |
+|Menu program check|Unit test, White box, functional|1.Enter all the options 1-5 from the menu 2.Enter other numbers apart from options 1-5 |If the number is from 1-5, the program returns the result from the correct options. If the input is not 1-5, the program should make the user enter another number|
+
+
+
 
 **Table 1** 
 
