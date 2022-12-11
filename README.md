@@ -39,12 +39,9 @@ Considering the budgetary constrains of the client and the hardware requirements
 ## Test Plan
 | Description | Type | Inputs | Outputs | 
 | ----------- | ---- | ------ | ------- |
-|Menu program check|Unit test, White box, functional|1.Enter all the options 1-5 from the menu 2.Enter other numbers apart from options 1-5 |If the number is from 1-5, the program returns the result from the correct options. If the input is not 1-5, the program should make the user enter another number|
+|Menu program check|Unit test, White box, functional|1.Enter all the options 1-5 from the menu 2.Enter other numbers apart from options 1-5 |If the number entered is from 1-5, the program returns the result from the correct options. If the input is not 1-5, the program should make the user enter another number|
 
-
-
-
-**Table 1** 
+**Table 1** The test plan shows how the program has been tested. The types of tests that are implemented are Unit Testing, Integration, and System Testing. The input in the table is the steps to follow in testing the functions and the output is what the program should return in the test. The test also include white box testing which is done by the developer who knows the code behind the program and black box testing done by other people who do not know the code.
 
 ## Record of Tasks
 | Task No | Planned Action                                                | Planned Outcome                                                                                                 | Time estimate | Target completion date | Criterion |
