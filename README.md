@@ -36,6 +36,10 @@ Considering the budgetary constrains of the client and the hardware requirements
 
 **Fig.3** The figure shows the flow diagram of the function that returns temperature and humidity data from the sensor. The function is called "data_reader". The function inputs a pin number then uses data from the Adafruit_DHT.DHT11 which is used with the model of the sensor which is DHT11. Once the function gets the sensor and the pin number, it returns the temperature and humidity.
 
+![smoothing diagram 2](https://user-images.githubusercontent.com/112055062/206912396-769ba45b-c251-4475-8b35-8d0b560dc590.jpg)
+
+**Fig.4** 
+
 ## Test Plan
 | Description | Type | Inputs | Outputs | 
 | ----------- | ---- | ------ | ------- |
@@ -56,6 +60,8 @@ Considering the budgetary constrains of the client and the hardware requirements
 |8| Code option 1 of the menu : Information about health temperature and humidity for the bird | To show the basic information about what the bird needs in order to survive | 1 hr| C|
 |9| Code option 4 of the menu: About menu | To let the client know what the program is about| 1 hr | Dec 11 | C|
 |10|Create test plan table| to let the users see that the functions are working| 10 min| Dec11 | B|
+|11|Edit System Diagram | To show the client how the sensoring device works with all the elements from the program to the hardware| 20 min| 11 Dec | B|
+|12|Create flowchart #2 for function smoothing | To show the client a clearer picture on how the code works | 20 min| 12 Dec| B|
 
 
 
