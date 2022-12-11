@@ -57,6 +57,11 @@ Considering the budgetary constrains of the client and the hardware requirements
 | 4 |Code the program to get the data | To be able to control and get data from the sensor | 1 hr | Dec 8| C|
 | 5 | Connect the raspberry pi and the sensor | To get temperature and humidity from the sensor | 1hr | Dec 8 | C|
 |6| Create flowchart for getting temperature and humidity data| To illustrate the code in a clearer picture|20 min| Dec11| B|
+|7| Create menu for the sensing device | To allow the client to choose what they want to know about the temperature and the humidity|1 hr| Dec 11|  C|
+|8| Code option 1 of the menu : Information about health temperature and humidity for the bird | To show the basic information about what the bird needs in order to survive | 1 hr| C|
+|9| Code option 4 of the menu: About menu | To...| 1 hr | Dec 11 | C|
+
+
 
 **Table 2** This table shows the record of tasks from the begining of creating this project until the end when the temperature and humidity is received and the analysis is completed. The table consists of the task number, planned action, planned outcome, the time taken to do the task, the date, and the criterion of the task(A,B,C,D).
 
