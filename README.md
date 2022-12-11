@@ -46,7 +46,7 @@ Considering the budgetary constrains of the client and the hardware requirements
 | 3       | Draw  the system diagram |  To have a clear idea of the hardware and software requirements for the proposal solution                      | 30min         | Nov 23                 | A         |
 | 4 |Code the program to get the data | To be able to control and get data from the sensor | 1 hr | Dec 8| C|
 | 5 | Connect the raspberry pi and the sensor | To get temperature and humidity from the sensor | 1hr | Dec 8 | C|
-| 
+|6| Create flowchart for getting temperature and humidity data| To illustrate the code in a clearer picture|20 min| Dec11| B|
 
 
 ## Test Plan
