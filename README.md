@@ -46,6 +46,7 @@ Considering the budgetary constrains of the client and the hardware requirements
 ## Test Plan
 | Description | Type | Inputs | Outputs | 
 | ----------- | ---- | ------ | ------- |
+
 **Table 1** 
 
 ## Record of Tasks
