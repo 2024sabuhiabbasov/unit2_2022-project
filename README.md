@@ -1,6 +1,6 @@
 # Unit 2: A Distributed Weather Station for ISAK
 
-## Criteria A: Planning
+# Criteria A: Planning
 
 ## Problem definition
 
