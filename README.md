@@ -43,6 +43,10 @@ Considering the budgetary constrains of the client and the hardware requirements
 
 **Fig.3** The figure shows the flow diagram of the function that returns temperature and humidity data from the sensor. The function is called "data_reader". The function inputs a pin number then uses data from the Adafruit_DHT.DHT11 which is used with the model of the sensor which is DHT11. Once the function gets the sensor and the pin number, it returns the temperature and humidity.
 
+## Test Plan
+| Description | Type | Inputs | Outputs | 
+| ----------- | ---- | ------ | ------- |
+**Table 1** 
 
 ## Record of Tasks
 | Task No | Planned Action                                                | Planned Outcome                                                                                                 | Time estimate | Target completion date | Criterion |
@@ -54,8 +58,8 @@ Considering the budgetary constrains of the client and the hardware requirements
 | 5 | Connect the raspberry pi and the sensor | To get temperature and humidity from the sensor | 1hr | Dec 8 | C|
 |6| Create flowchart for getting temperature and humidity data| To illustrate the code in a clearer picture|20 min| Dec11| B|
 
+**Table 2** This table shows the record of tasks from the begining of creating this wallet until the end when the wallet is completed. The table consists of the task number, planned action, planned outcome, the time taken to do the task, the date, and the criterion of the task(A,B,C,D).
 
-## Test Plan
 
 # Criteria C: Development
 
