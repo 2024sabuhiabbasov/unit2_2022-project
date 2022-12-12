@@ -11,7 +11,8 @@ Considering the client requirements an adequate solution includes a low cost sen
 
 Considering the budgetary constrains of the client and the hardware requirements, the software tool that I proposed for this solution is Python. Python is open source, it is mature and supported in mutiple platforms (platform-independent) including macOS, Windows, Linux and can also be used to program the Arduino microprocessor [^5][^6]. In comparison to the alternative C or C++, which share similar features, Python is a High level programming language (HLL) with high abstraction [^7]. For example, memory management is automatic in Python whereas it is responsability of the C/C++ developer to allocate and free up memory [^7], this could result in faster applications but also memory problems. In addition a HLL language will allow me and future developers extend the solution or solve issues proptly.  
 
-**Design statement**
+## Design Statement
+We will create a device that monitors the temperature and the humidity inside the room. A Raspberry Pi 4 and three DHT_11 sensors will be used to collect the data. The data will then be uploaded to an online server in real time every 5 minutes for 48 hours. After the data is collected, we will compare the data of the temperature and humidity from what we collected indoors, and the temperature and humidity from outdoor sensors. After completing the comparison, we will provide a prediction for the future and give advice on how the client should adjust their room temperature and humidity for the health of the bird. We will take approximately 2 weeks to collect the data, provide predictions, and complete the success criteria for the client.
 
 ## Success Criteria
 
@@ -66,7 +67,8 @@ Considering the budgetary constrains of the client and the hardware requirements
 |9| Code option 4 of the menu: About menu | To let the client know what the program is about| 1 hr | Dec 11 | C|
 |10|Create test plan table| to let the users see that the functions are working| 10 min| Dec11 | B|
 |11|Edit System Diagram | To show the client how the sensoring device works with all the elements from the program to the hardware| 20 min| 11 Dec | B|
-|12|Create flowchart #2 for function smoothing | To show the client a clearer picture on how the code works | 20 min| 12 Dec| B|
+|12|Create flowchart #2 for function smoothing | To show the client a clearer picture on how the code works | 20 min| Dec 12| B|
+|13|Write Design Statement| To let the client understand the process of getting the solutin is like | 30 min| Dec 12|A|
 
 
 
