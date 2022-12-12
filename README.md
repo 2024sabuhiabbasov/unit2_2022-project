@@ -69,6 +69,7 @@ We will create a device that monitors the temperature and the humidity inside th
 |11|Edit System Diagram | To show the client how the sensoring device works with all the elements from the program to the hardware| 20 min| 11 Dec | B|
 |12|Create flowchart #2 for function smoothing | To show the client a clearer picture on how the code works | 20 min| Dec 12| B|
 |13|Write Design Statement| To let the client understand the process of getting the solutin is like | 30 min| Dec 12|A|
+|14| Write list of techniques used| To show what techniques were used in the design process of the product| 20 min | Dec 12 | D|
 
 
 
