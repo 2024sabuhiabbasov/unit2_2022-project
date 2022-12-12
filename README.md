@@ -80,6 +80,11 @@ We will create a device that monitors the temperature and the humidity inside th
 # Criteria C: Development
 
 ## List of techniques used
+1. Functions
+2. For loop
+3. While loop 
+4. Creating graph using Matplotlib[^11]
+5. Generating mathematical equations with Numpy [^12]
 
 ## Development
 
