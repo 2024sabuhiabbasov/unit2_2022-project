@@ -62,7 +62,7 @@ Considering the budgetary constrains of the client and the hardware requirements
 | 5 | Connect the raspberry pi and the sensor | To get temperature and humidity from the sensor | 1hr | Dec 8 | C|
 |6| Create flowchart for getting temperature and humidity data| To illustrate the code in a clearer picture|20 min| Dec11| B|
 |7| Create menu for the sensing device | To allow the client to choose what they want to know about the temperature and the humidity|1 hr| Dec 11|  C|
-|8| Code option 1 of the menu : Information about health temperature and humidity for the bird | To show the basic information about what the bird needs in order to survive | 1 hr| C|
+|8| Code option 1 of the menu : Information about health temperature and humidity for the bird | To show the basic information about what the bird needs in order to survive | 1 hr|Dec11| C|
 |9| Code option 4 of the menu: About menu | To let the client know what the program is about| 1 hr | Dec 11 | C|
 |10|Create test plan table| to let the users see that the functions are working| 10 min| Dec11 | B|
 |11|Edit System Diagram | To show the client how the sensoring device works with all the elements from the program to the hardware| 20 min| 11 Dec | B|
