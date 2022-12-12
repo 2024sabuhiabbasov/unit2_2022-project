@@ -159,7 +159,7 @@ for s in sensors_humidity:
    x, smoothed_value = smoothing(data=value[0:288])
    values_humidity.append(smoothed_value)
 ```
-**Code1** Shows the code where the program gets the data from the server with the function that we have written in another library called get_sensor and the data is then smoothed with a size of 12 samples using the funciton smoothing 
+**Code1** Shows the code where the program gets the data from the server with the function that we have written in another library called get_sensor (shown below in **Code2**) and the data is then smoothed with a size of 12 samples using the funciton smoothing (shown below as **Code3**)
 
 ```.py
 def get_sensor(id: int, url: str = "192.168.6.142/readings") -> list:
