@@ -117,6 +117,49 @@ For example, this data, {"value": 22.0, "id": 65010, "datetime": "2022-12-12T19:
 20. Using ANSI colors 
 
 ## Development
+The following are what we developed from the client’s success criteria.
+## 1. The solution provides a visual representation of the Humidity and Temperature values inside a dormitory (Local) and outside the house (Remote) for a period of minimum 48 hours.
+To provide a visual representation of the temperature and humidity values, we requested the data of the indoor sensor from the server which we have sent real time data every 5 minutes for 48 hours and the outdoor data from the same server. Then, we smoothed the data with a size window of 12 samples to eliminate the outliers for a more accurate result.  After we get the smoothed data from all sensors, we calculate the mean of the data from the 3 sensors.  The data is then merged into one list for each temperature and humidity outside and inside the residence. With the clean data, we use Matplotlib which is a plotting diagram library for Python to plot a graph that shows the relationship between the change in temperature/humidity and the number of samples.
+
+```.py
+sensors_temperature = [507, 508, 509]
+sensors_humidity = [510, 511, 512]
+sensors_outside_temperature = [5]
+sensors_outside_humidity = [4] 
+values_temperature = []
+values_humidity = []
+values_outside_temperature = []
+values_outside_humidity = []
+
+for s in sensors_outside_humidity:
+   # get the sensors_temperature from the server
+   value = get_sensor(id=s)
+   # smooth the data with a size of 12 samples
+   x, smoothed_value = smoothing(data=value[0:288])
+   values_outside_humidity.append(smoothed_value)
+
+for s in sensors_outside_temperature:
+   # get the sensors_temperature from the server
+   value = get_sensor(id=s)
+   # smooth the data with a size of 12 samples
+   x, smoothed_value = smoothing(data=value[0:288])
+   values_outside_temperature.append(smoothed_value)
+
+for s in sensors_temperature:
+   # get the sensors_temperature from the server
+   value = get_sensor(id=s)
+   # smooth the data with a size of 12 samples
+   x, smoothed_value = smoothing(data=value[0:288])
+   values_temperature.append(smoothed_value)
+
+for s in sensors_humidity:
+   # get the sensors_temperature from the server
+   value = get_sensor(id=s)
+   # smooth the data with a size of 12 samples
+   x, smoothed_value = smoothing(data=value[0:288])
+   values_humidity.append(smoothed_value)
+```
+**Code1** Shows the code where the program gets the data from the server with the function that we have written in another library called get_sensor and the data is then smoothed with a size of 12 samples using the funciton smoothing 
 
 
 # Criteria D: Functionality
