@@ -85,6 +85,23 @@ We will create a device that monitors the temperature and the humidity inside th
 3. While loop 
 4. Creating graph using Matplotlib[^11]
 5. Generating mathematical equations with Numpy [^12]
+6. Working remotely with Raspberry pi 4 [^9] using VNC Viewer [^13]
+7. Getting data from the sensors using Adafruit DHT Library [^14] 
+8. Sending the temperature and humidity from the sensors to an online api server 
+9. Validate integer input 
+10. Using If statement
+11. Creating ASCII art 
+12. Using Variables
+13. Importing functions from library
+14. Print 
+15. Using f strings
+16. Using Elif statement
+17. Using Else statement
+18. Logging in to an online api server
+19. Reading data from an online api server
+20. Using ANSI colors 
+
+
 
 ## Development
 
@@ -105,5 +122,6 @@ A 7 min video demonstrating the proposed solution with narration
 [^10]:“Dht11–Temperature and Humidity Sensor.” Components101, https://components101.com/sensors/dht11-temperature-sensor. 
 [^11]: “Visualization with Python.” Matplotlib, https://matplotlib.org/. 
 [^12]: NumPy, https://numpy.org/. 
+[^13]:“Download VNC Viewer: VNC® Connect.” RealVNC®, 9 Dec. 2022, https://www.realvnc.com/en/connect/download/viewer/. 
 
 
