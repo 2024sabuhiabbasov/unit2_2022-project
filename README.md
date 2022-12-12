@@ -88,6 +88,7 @@ Each data tells different information separated by commas, the first element, �
 For example, this data, {"value": 22.0, "id": 65010, "datetime": "2022-12-12T19:29:47.212069", "sensor_id": 507}, shows that the sensor detects temperature as the sensor id is “507”. It also shows that the temperature is 22 degrees Celsius, the id of this sensor is 65010, and the date of the data is 12th December 2022 at 7pm 29 minutes 47 seconds.
 
 <img width="1249" alt="data in server" src="https://user-images.githubusercontent.com/112055062/207038574-7ef259ff-d995-48d2-9738-f786076aecda.png">
+
 **Fig.5** Shows a section of the online API server http://192.168.6.142/readings where the data is being stored in real time every 5 minutes
 
 
