@@ -72,6 +72,8 @@ Considering the budgetary constrains of the client and the hardware requirements
 
 **Table 2** This table shows the record of tasks from the begining of creating this project until the end when the temperature and humidity is received and the analysis is completed. The table consists of the task number, planned action, planned outcome, the time taken to do the task, the date, and the criterion of the task(A,B,C,D).
 
+## Data Storing
+
 
 # Criteria C: Development
 
