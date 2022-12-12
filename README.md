@@ -17,12 +17,12 @@ We will create a device that monitors the temperature and the humidity inside th
 ## Success Criteria
 
 1. The solution provides a visual representation of the Humidity and Temperature values inside a dormitory (Local) and outside the house (Remote) for a period of minimum 48 hours. 
-1. ```[HL]``` The local variables will be measure using a set of 3 sensors around the dormitory.
-2. The solution provides a mathematical modelling for the Humidity and Temperature levels for each Local and Remote locations. ```(HL: non-linear model)```
-3. The solution provides a comparative analysis for the Humidity and Temperature levels for each Local and Remote locations including mean, standad deviation, minimum, maximum, and median.
-4. ```(HL)```The Local samples are posted to the remote server.
-5. Create a prediction the subsequent 12 hours for both temperature and humidity.
-6. A poster summarizing the visual representations, model and analysis is created. The poster includes a recommendation about healthy levels for Temperature and Humidity.
+2. ```[HL]``` The local variables will be measure using a set of 3 sensors around the dormitory.
+3. The solution provides a mathematical modelling for the Humidity and Temperature levels for each Local and Remote locations. ```(HL: non-linear model)```
+4. The solution provides a comparative analysis for the Humidity and Temperature levels for each Local and Remote locations including mean, standad deviation, minimum, maximum, and median.
+5. ```(HL)```The Local samples are posted to the remote server.
+6. Create a prediction the subsequent 12 hours for both temperature and humidity.
+7. A poster summarizing the visual representations, model and analysis is created. The poster includes a recommendation about healthy levels for Temperature and Humidity.
 
 # Criteria B: Design
 
@@ -188,7 +188,16 @@ def smoothing(data:list, size_window:int=12)->list:
 ```
 **Code3** Shows the function that is used to smooth the window size for a cleaner and more accurate set of data
 
-----The graph for visual representation will be up later
+----The graph for visual representation will be up later fig.6
+
+## 2.The local variables will be measured using a set of 3 sensors.
+To complete the criteria, we have 3 DHT11 sensors that are connected to a Raspberry pi 4 and each measure the temperature and humidity (see figure 7). We use 3 sensors to get more accurate data just in case one of the sensors is inaccurate the other two could lower the error margin. The measuring device is then placed indoors in the same residence as where Peter, the bird, lives, so the temperature, and humidity measurements is the most accurate and reliable. 
+
+![3 sensors](https://user-images.githubusercontent.com/112055062/207089251-25ad59e2-0dcf-42c1-bebd-cbdda18916d2.JPG)
+**Fig.7** Shows the Raspberry pi 4 connected to the three DHT11 sensors
+
+![A Distributed Weather Station at R3-14](https://user-images.githubusercontent.com/112055062/207089309-a8355fe6-c88c-4cf6-9b36-85ba4727a892.jpg)
+**Fig.8** Shows the location of the sensoring device in an indoor location
 
 # Criteria D: Functionality
 
