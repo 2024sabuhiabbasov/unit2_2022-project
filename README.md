@@ -17,7 +17,7 @@ We will create a device that monitors the temperature and the humidity inside th
 ## Success Criteria
 
 1. The solution provides a visual representation of the Humidity and Temperature values inside a dormitory (Local) and outside the house (Remote) for a period of minimum 48 hours. 
-1. ```[HL]``` The local variables will be measure using a set of 4 sensors around the dormitory.
+1. ```[HL]``` The local variables will be measure using a set of 3 sensors around the dormitory.
 2. The solution provides a mathematical modelling for the Humidity and Temperature levels for each Local and Remote locations. ```(HL: non-linear model)```
 3. The solution provides a comparative analysis for the Humidity and Temperature levels for each Local and Remote locations including mean, standad deviation, minimum, maximum, and median.
 4. ```(HL)```The Local samples are posted to the remote server.
