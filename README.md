@@ -71,6 +71,8 @@ We will create a device that monitors the temperature and the humidity inside th
 |13|Write Design Statement| To let the client understand the process of getting the solutin is like | 30 min| Dec 12|A|
 |14| Write list of techniques used| To show what techniques were used in the design process of the product| 20 min | Dec 12 | D|
 |15| Write the data storing method | To show how the data is being stored and to show the reliability and safety of the storing method | 30 min| Dec 12| B|
+|16| Write the development section to fulfill success criteria 1| To show the clients what actions have been done to meet the needs of the client| 40 min| Dec 12|C|
+|17| Write the development section to fulfill success criteria 2| To show the clients the method that is used in order to get 3 sensors| 30 min| Dec12| C|
 
 
 
