@@ -70,6 +70,7 @@ We will create a device that monitors the temperature and the humidity inside th
 |12|Create flowchart #2 for function smoothing | To show the client a clearer picture on how the code works | 20 min| Dec 12| B|
 |13|Write Design Statement| To let the client understand the process of getting the solutin is like | 30 min| Dec 12|A|
 |14| Write list of techniques used| To show what techniques were used in the design process of the product| 20 min | Dec 12 | D|
+|15| Write the data storing method | To show how the data is being stored and to show the reliability and safety of the storing method | 30 min| Dec 12| B|
 
 
 
@@ -86,6 +87,8 @@ Each data tells different information separated by commas, the first element, �
 
 For example, this data, {"value": 22.0, "id": 65010, "datetime": "2022-12-12T19:29:47.212069", "sensor_id": 507}, shows that the sensor detects temperature as the sensor id is “507”. It also shows that the temperature is 22 degrees Celsius, the id of this sensor is 65010, and the date of the data is 12th December 2022 at 7pm 29 minutes 47 seconds.
 
+<img width="1249" alt="data in server" src="https://user-images.githubusercontent.com/112055062/207038574-7ef259ff-d995-48d2-9738-f786076aecda.png">
+**Fig.5** Shows a section of the online API server http://192.168.6.142/readings where the data is being stored in real time every 5 minutes
 
 
 # Criteria C: Development
