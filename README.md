@@ -188,6 +188,8 @@ def smoothing(data:list, size_window:int=12)->list:
 ```
 **Code3** Shows the function that is used to smooth the window size for a cleaner and more accurate set of data
 
+----The graph for visual representation will be up later
+
 # Criteria D: Functionality
 
 A 7 min video demonstrating the proposed solution with narration
