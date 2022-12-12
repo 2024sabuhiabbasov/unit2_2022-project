@@ -124,5 +124,6 @@ A 7 min video demonstrating the proposed solution with narration
 [^11]: “Visualization with Python.” Matplotlib, https://matplotlib.org/. 
 [^12]: NumPy, https://numpy.org/. 
 [^13]:“Download VNC Viewer: VNC® Connect.” RealVNC®, 9 Dec. 2022, https://www.realvnc.com/en/connect/download/viewer/. 
+[^14]: Adafruit. “Adafruit/ADAFRUIT_PYTHON_DHT: Python Library to Read the DHT Series of Humidity and Temperature Sensors on a Raspberry Pi or Beaglebone Black.” GitHub, https://github.com/adafruit/Adafruit_Python_DHT. 
 
 
