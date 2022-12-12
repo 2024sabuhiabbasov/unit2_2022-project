@@ -161,6 +161,32 @@ for s in sensors_humidity:
 ```
 **Code1** Shows the code where the program gets the data from the server with the function that we have written in another library called get_sensor and the data is then smoothed with a size of 12 samples using the funciton smoothing 
 
+```.py
+def get_sensor(id: int, url: str = "192.168.6.142/readings") -> list:
+   req = requests.get(f'http://{url}')
+   data = req.json()
+   readings = data["readings"][0]
+   out = []
+   for r in readings:
+       if r["sensor_id"] == id:
+           out.append(r["value"])
+   return out
+```
+**Code2** Shows the function that is used to get the data of the temperature and humidity from the sensors
+
+```.py
+def smoothing(data:list, size_window:int=12)->list:
+   x = [] # horizontal axis
+   y = [] # smoothed version vertical axis
+   for i in range(0, len(data), size_window):
+       segment_mean = sum(data[i:i+size_window])/size_window
+       y.append(segment_mean)
+       x.append(i)
+   x.pop()
+   y.pop()
+   return x, y
+```
+**Code3** Shows the function that is used to smooth the window size for a cleaner and more accurate set of data
 
 # Criteria D: Functionality
 
