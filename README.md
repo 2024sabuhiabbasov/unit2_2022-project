@@ -98,4 +98,7 @@ A 7 min video demonstrating the proposed solution with narration
 [^8]: Ornithology, British Trust for. “Tree Sparrow.” BTO, 4 Sept. 2019, https://www.bto.org/our-science/projects/gbw/gardens-wildlife/garden-birds/a-z-garden-birds/tree-sparrow. 
 [^9]:Raspberry Pi. “Raspberry Pi 4 Model B.” Raspberry Pi, https://www.raspberrypi.com/products/raspberry-pi-4-model-b/. 
 [^10]:“Dht11–Temperature and Humidity Sensor.” Components101, https://components101.com/sensors/dht11-temperature-sensor. 
+[^11]: “Visualization with Python.” Matplotlib, https://matplotlib.org/. 
+[^12]: NumPy, https://numpy.org/. 
+
 
