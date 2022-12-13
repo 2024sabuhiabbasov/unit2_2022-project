@@ -87,6 +87,7 @@ We will create a device that monitors the temperature and the humidity inside th
 |15| Write the data storing method | To show how the data is being stored and to show the reliability and safety of the storing method | 30 min| Dec 12| B|
 |16| Write the development section to fulfill success criteria 1| To show the clients what actions have been done to meet the needs of the client| 40 min| Dec 12|C|
 |17| Write the development section to fulfill success criteria 2| To show the clients the method that is used in order to get 3 sensors| 30 min| Dec12| C|
+|18| Write the development section to fulfill success criteria 3,4,5| To explain the work that has been done to complete the criteria| 3 hr| Dec 12 | C|
 
 
 
@@ -322,7 +323,7 @@ a1, b1, c1, d1 = np.polyfit(sample, mean_per_hour_outside_h, 3)
 
 ## 4. The solution provides a comparative analysis for the Humidity and Temperature levels for each Local and Remote locations including mean, standad deviation, minimum, maximum, and median.
 
-To provide a comparative analysis, we creatd a graph where we compare the temperature and humidity of the inside(local) and outside(remote) location in the same graph next to each other. From **Fig.13**, we are able to see two graphs in which the first one shows the average temperature with the samples. The red line shows the temperature for outside(remote) location, and the blue line presents the temperature for inside(local) location. The graph shows that there is a point where the temperature matches at approximately 6.5 samples, then it diverges, and gets closer to eachother again. In the second graph, we are able to see the average humidity which, again, the blue line represents the inside(local) location, and the red line represents the outside(remote) location. The graph shows that the difference between the two locations are greater then converges closer to eachother and starts diverging again.
+To provide a comparative analysis, we created a graph where we compare the temperature and humidity of the inside(local) and outside(remote) location in the same graph next to each other. From **Fig.13**, we are able to see two graphs in which the first one shows the average temperature with the samples. The red line shows the temperature for outside(remote) location, and the blue line presents the temperature for inside(local) location. The graph shows that there is a point where the temperature matches at approximately 6.5 samples, then it diverges, and gets closer to eachother again. In the second graph, we are able to see the average humidity which, again, the blue line represents the inside(local) location, and the red line represents the outside(remote) location. The graph shows that the difference between the two locations are greater then converges closer to eachother and starts diverging again.
 
 ![Average of sensors for Temperature-Humidity (1)](https://user-images.githubusercontent.com/112055062/207328018-8a99f681-672c-467f-b67f-f2e9d0c14add.png)
 
