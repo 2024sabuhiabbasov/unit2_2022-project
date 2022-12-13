@@ -325,11 +325,94 @@ a1, b1, c1, d1 = np.polyfit(sample, mean_per_hour_outside_h, 3)
 
 ## 4. The solution provides a comparative analysis for the Humidity and Temperature levels for each Local and Remote locations including mean, standad deviation, minimum, maximum, and median.
 
-To provide a comparative analysis, we created a graph where we compare the temperature and humidity of the inside(local) and outside(remote) location in the same graph next to each other. From **Fig.13**, we are able to see two graphs in which the first one shows the average temperature with the samples. The red line shows the temperature for outside(remote) location, and the blue line presents the temperature for inside(local) location. The graph shows that there is a point where the temperature matches at approximately 6.5 samples, then it diverges, and gets closer to eachother again. In the second graph, we are able to see the average humidity which, again, the blue line represents the inside(local) location, and the red line represents the outside(remote) location. The graph shows that the difference between the two locations are greater then converges closer to eachother and starts diverging again.
+To provide a comparative analysis, we created a graph where we compare the temperature and humidity of the inside(local) and outside(remote) location in the same graph next to each other. From **Fig.15**, we are able to see two graphs in which the first one shows the average temperature with the samples. The red line shows the temperature for outside(remote) location, and the blue line presents the temperature for inside(local) location. The graph shows that there is a point where the temperature matches at approximately 6.5 samples, then it diverges, and gets closer to eachother again. In the second graph, we are able to see the average humidity which, again, the blue line represents the inside(local) location, and the red line represents the outside(remote) location. The graph shows that the difference between the two locations are greater then converges closer to eachother and starts diverging again.
 
 ![Average of sensors for Temperature-Humidity (1)](https://user-images.githubusercontent.com/112055062/207328018-8a99f681-672c-467f-b67f-f2e9d0c14add.png)
 
 **Fig.15** The figure shows the two graphs of average of sensors for temperature and humidity with the comparison between the two sensoring locations: inside(local) and outside(remote)
+
+```.py
+mean_per_hour_t = []
+mean_per_hour_h = []
+mean_per_hour_outside_h = []
+mean_per_hour_outside_t = []
+x_t = []
+x_h = []
+x_t_o = []
+x_h_o = []
+for i in range(len(values_temperature[0])):
+    # list comprehension
+    data = [values_temperature[n][i] for n in range(len(sensors_temperature))]
+    mean_per_hour_t.append(sum(data) / len(sensors_temperature))
+    x_t.append(i)
+
+for i in range(len(values_humidity[0])):
+    # list comprehension
+    data = [values_humidity[n][i] for n in range(len(sensors_humidity))]
+    mean_per_hour_h.append(sum(data) / len(sensors_humidity))
+    x_h.append(i)
+
+for i in range(len(values_outside_temperature[0])):
+    # list comprehension
+    data = [values_outside_temperature[n][i] for n in range(len(sensors_outside_temperature))]
+    mean_per_hour_outside_t.append(sum(data) / len(sensors_outside_temperature))
+    x_t_o.append(i)
+
+for i in range(len(values_outside_humidity[0])):
+    # list comprehension
+    data = [values_outside_humidity[n][i] for n in range(len(sensors_outside_humidity))]
+    mean_per_hour_outside_h.append(sum(data) / len(sensors_outside_humidity))
+    x_h_o.append(i)
+
+# plot the mean of the sensors
+a1, b1, c1, d1 = np.polyfit(x_t, mean_per_hour_t, 3)
+print(a1, b1, c1, d1)
+polynomial_model_t = []
+for t in range(0, len(values_temperature[0])):
+    polynomial_model_t.append(a1*(t**3) + b1*(t**2) + c1*t + d1)
+
+a2, b2, c2, d2 = np.polyfit(x_h, mean_per_hour_h, 3)
+print(a2, b2, c2, d2)
+polynomial_model_h = []
+for t in range(0, len(values_humidity[0])):
+    polynomial_model_h.append(a2*(t**3) + b2*(t**2) + c2*t + d2)
+
+a3, b3, c3, d3 = np.polyfit(x_t_o, mean_per_hour_outside_t, 3)
+print(a3, b3, c3, d3)
+polynomial_model_outside_t = []
+for t in range(0, len(values_outside_temperature[0])):
+    polynomial_model_outside_t.append(a3*(t**3) + b3*(t**2) + c3*t + d3)
+
+a4, b4, c4, d4 = np.polyfit(x_h_o, mean_per_hour_outside_h, 3)
+print(a4, b4, c4, d4)
+polynomial_model_outside_h = []
+for t in range(0, len(values_outside_humidity[0])):
+    polynomial_model_outside_h.append(a4*(t**3) + b4*(t**2) + c4*t + d4)
+
+ax = plt.axes()
+ax.set_facecolor("lightsteelblue") # Choosing the background color
+plt.subplot(3, 1, 1)
+plt.title("Average of sensors for Temperature\n11 December 2022 10:39 - 13 December 2022 10:39 AM")
+plt.grid(True, color='dimgray')
+plt.plot(x_t, polynomial_model_t, color='#3264a8')
+plt.plot(x_t_o, polynomial_model_outside_t, color='#eb4034')
+plt.legend(['Inside', 'Outside']) # adding labels of colors to the graph
+plt.xlabel("Samples per hour for Temperature")
+plt.ylabel("Celsius")
+plt.tick_params('x', labelbottom=True)
+plt.subplot(3, 1, 3)
+plt.title("Average of sensors for Humidity\n11 December 2022 10:39 - 13 December 2022 10:39 AM")
+plt.grid(True, color='dimgray')
+plt.plot(x_h, polynomial_model_h, color='#3290a8')
+plt.plot(x_h_o, polynomial_model_outside_h, color='#eb4034')
+plt.legend(['Inside', 'Outside']) # adding labels of colors to the graph
+plt.xlabel("Samples per hour for Humidity")
+plt.ylabel("%")
+plt.tick_params('x', labelbottom=True)
+
+plt.show()
+```
+**Code8** The code above shows the code of the two graphs which is used to compare the data of the temperature and humidity outside(remote) and inside(local) locations.
 
 ## 5. The Local samples are posted to the remote server.
 To fulfill this criteria, we stored the data acquired with the DHT11 sensors located indoors on an online API server http://192.168.6.142/readings. The data is being posted to the server in real time every 5 minutes. 
@@ -367,7 +450,7 @@ while True:
     time.sleep(300)
 ```
 
-**Code8** This is the code that is used to send the temperature and humidity which is being sent to the online API server http://192.168.6.142/readings every 5 minutes. We used the library Adafruit_DHT which is used with the DHT11 sensors. Then, we created a function called data_reader to return the temperature and humidity. The data is then sent to the server. To send the data to the server, we also need to have authorization using access token with a username and password. 
+**Code9** This is the code that is used to send the temperature and humidity which is being sent to the online API server http://192.168.6.142/readings every 5 minutes. We used the library Adafruit_DHT which is used with the DHT11 sensors. Then, we created a function called data_reader to return the temperature and humidity. The data is then sent to the server. To send the data to the server, we also need to have authorization using access token with a username and password. 
 
 
 <img width="1249" alt="data in server" src="https://user-images.githubusercontent.com/112055062/207038574-7ef259ff-d995-48d2-9738-f786076aecda.png">
@@ -401,7 +484,7 @@ for sample in readings:
         with open("Database_inside", "a") as file:
             file.write(f"{sample['datetime']},{sample['sensor_id']},{sample['value']}\n")
 ```
-**Code9** Shows the code of the data written into the CSV file
+**Code10** Shows the code of the data written into the CSV file
 
 ![csv image](https://user-images.githubusercontent.com/112055062/207231324-5e2b936e-f8dd-432e-beba-b46cc575bb10.png)
 **Fig.17** Shows the screenshot of the CSV file Database_inside 
