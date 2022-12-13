@@ -93,6 +93,7 @@ We will create a device that monitors the temperature and the humidity inside th
 **Table 2** This table shows the record of tasks from the begining of creating this project until the end when the temperature and humidity is received and the analysis is completed. The table consists of the task number, planned action, planned outcome, the time taken to do the task, the date, and the criterion of the task(A,B,C,D).
 
 ## Data Storing Method
+## 1. Online API Server
 The data of temperature and humidity is being stored in an online API server: http://192.168.6.142/readings. Every 5 minutes for 48 hours, the program will send data to the server. As there are 3 sensors, each minute, the server will receive a total of 3 temperature data, and 3 humidity data. The data  will be sent to the server in a particular format. The following is an example of the 6 data sent each time:
 
 ```.py
@@ -107,6 +108,37 @@ For example, this data, {"value": 22.0, "id": 65010, "datetime": "2022-12-12T19:
 
 **Fig.6** Shows a section of the online API server http://192.168.6.142/readings where the data is being stored in real time every 5 minutes
 
+## 2. Comma Separated Value File (CSV)
+The data is not only stored in the online server, but also in a comma separated value file which we created called "Database". The format of the data is the same as the one stored in the online server which provides the information of the value, id, datetime, and sensor id. 
+
+```.py
+import requests
+
+req = requests.get('http://192.168.6.142/readings')
+data = req.json()
+readings = data['readings'][0]
+
+for sample in readings:
+    if sample['sensor_id'] == 507:
+        with open("Database", "a") as file:
+            file.write(f"{sample}")
+    elif sample['sensor_id'] == 508:
+        with open("Database", "a") as file:
+            file.write(f"{sample}")
+    elif sample['sensor_id'] == 509:
+        with open("Database", "a") as file:
+            file.write(f"{sample}")
+    elif sample['sensor_id'] == 510:
+        with open("Database", "a") as file:
+            file.write(f"{sample}")
+    elif sample['sensor_id'] == 511:
+        with open("Database", "a") as file:
+            file.write(f"{sample}")
+    elif sample['sensor_id'] == 512:
+        with open("Database", "a") as file:
+            file.write(f"{sample}")
+```
+The following shows the code of the data being put in the CSV file
 
 # Criteria C: Development
 
@@ -136,10 +168,6 @@ For example, this data, {"value": 22.0, "id": 65010, "datetime": "2022-12-12T19:
 The following are what we developed from the client’s success criteria.
 ## 1. The solution provides a visual representation of the Humidity and Temperature values inside a dormitory (Local) and outside the house (Remote) for a period of minimum 48 hours.
 To provide a visual representation of the temperature and humidity values, we requested the data of the indoor sensor from the server which we have sent real time data every 5 minutes for 48 hours and the outdoor data from the same server. Then, we smoothed the data with a size window of 12 samples to eliminate the outliers for a more accurate result.  After we get the smoothed data from all sensors, we calculate the mean of the data from the 3 sensors.  The data is then merged into one list for each temperature and humidity outside and inside the residence. With the clean data, we use Matplotlib which is a plotting diagram library for Python to plot a graph that shows the relationship between the change in temperature/humidity and the number of samples.
-
-![Average of sensors for Temperature-Humidity](https://user-images.githubusercontent.com/111758436/207184962-f6440ccb-76d1-4370-9889-da9b2ce8d5f9.png)
-
-**Fig.7** The figure shows the two graphs of the Average of sensors for Temperature and the Average of sensors for Humidity respectively. The first graph which is the Average of sensors for Temperature consists of two components which are the temperature inside(local) and outside(remote). On the x-axis the graph shows the samples per hour for the temperature, and on the y-axis, the graph shows the temperature in Celcius. The second graph, Average of sensors for Humidity, consists of two components which are the temperature inside(local) and outside(remote). The x-axis of the graph whos Samples per hour for Humidity, while the y-axis shows the percent humidity.
 
 ```.py
 sensors_temperature = [507, 508, 509]
@@ -208,7 +236,9 @@ def smoothing(data:list, size_window:int=12)->list:
 ```
 **Code3** Shows the function that is used to smooth the window size for a cleaner and more accurate set of data
 
-----The graph for visual representation will be up later fig.6
+![Average of sensors for Temperature-Humidity](https://user-images.githubusercontent.com/111758436/207184962-f6440ccb-76d1-4370-9889-da9b2ce8d5f9.png)
+
+**Fig.7** The figure shows the two graphs of the Average of sensors for Temperature and the Average of sensors for Humidity respectively. The first graph which is the Average of sensors for Temperature consists of two components which are the temperature inside(local) and outside(remote). On the x-axis the graph shows the samples per hour for the temperature, and on the y-axis, the graph shows the temperature in Celcius. The second graph, Average of sensors for Humidity, consists of two components which are the temperature inside(local) and outside(remote). The x-axis of the graph whos Samples per hour for Humidity, while the y-axis shows the percent humidity.
 
 ## 2.The local variables will be measured using a set of 3 sensors.
 To complete the criteria, we have 3 DHT11 sensors that are connected to a Raspberry pi 4 and each measure the temperature and humidity (see figure 7). We use 3 sensors to get more accurate data just in case one of the sensors is inaccurate the other two could lower the error margin. The measuring device is then placed indoors in the same residence as where Peter, the bird, lives, so the temperature, and humidity measurements is the most accurate and reliable. 
@@ -228,8 +258,6 @@ To complete the criteria, we have 3 DHT11 sensors that are connected to a Raspbe
 ## 5. (HL)The Local samples are posted to the remote server.
 ## 6.Create a prediction the subsequent 12 hours for both temperature and humidity.
 ## 7. A poster summarizing the visual representations, model and analysis is created. The poster includes a recommendation about healthy levels for Temperature and Humidity.
-
-
 
 # Criteria D: Functionality
 
