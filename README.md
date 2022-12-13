@@ -109,11 +109,11 @@ For example, this data, {"value": 22.0, "id": 65010, "datetime": "2022-12-12T19:
 **Fig.6** Shows a section of the online API server http://192.168.6.142/readings where the data is being stored in real time every 5 minutes
 
 ## 2. Comma Separated Value File (CSV)
-The data is not only stored in the online server, but also in a comma separated value file which we created called "Database_inside". The format of the data is organized to show the information of the datetime, the sensor id, and the value of either temperature of humidity. 
+The data is not only stored in the online server, but also in a comma separated value file which we created called "Database_inside". The format of the data is organized to show the information of the datetime, the sensor id, and the value of either temperature of humidity from the local location indoors. 
 
 ![csv image](https://user-images.githubusercontent.com/112055062/207229610-c8bf7db0-0321-46a7-bd9c-5fd92ef6c091.png)
 
-**Fig.7** Shows a screenshot of the CSV file, Database_inside, which stores the data of
+**Fig.7** Shows a screenshot of the CSV file, Database_inside
 
 # Criteria C: Development
 
@@ -226,7 +226,11 @@ To complete the criteria, we have 3 DHT11 sensors that are connected to a Raspbe
 **Fig.8** Shows the location of the sensoring device in an indoor location
 
 ## 3. The solution provides a mathematical modelling for the Humidity and Temperature levels for each Local and Remote locations.
+From the humidity and temperature that we have collected, we have generated a mathematical model for both humidity and temperature for each local and remote location. The mathematical equation generated is below:
+
 ![Average of sensors for Temperature Inside](https://user-images.githubusercontent.com/111758436/207187630-950ef449-8a65-4b10-9fc3-0f0b17800d23.png)
+**Fig.9** The figure above shows the graph for the average of sensors for the temperature inside (local). The equation for this mathematical model is **y = -00007.9(x^2)+0.01x+22.2** It is a quadratic equation which is generated using NumPy with the code below:
+
 ![Average of sensors for Humidity Inside](https://user-images.githubusercontent.com/111758436/207187983-2ec6a359-a2c6-47a2-88bf-9a78147fae57.png)
 
 ## 4. The solution provides a comparative analysis for the Humidity and Temperature levels for each Local and Remote locations including mean, standad deviation, minimum, maximum, and median.
