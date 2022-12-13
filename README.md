@@ -322,6 +322,12 @@ a1, b1, c1, d1 = np.polyfit(sample, mean_per_hour_outside_h, 3)
 
 ## 4. The solution provides a comparative analysis for the Humidity and Temperature levels for each Local and Remote locations including mean, standad deviation, minimum, maximum, and median.
 
+To provide a comparative analysis, we creatd a graph where we compare the temperature and humidity of the inside(local) and outside(remote) location in the same graph next to each other. From **Fig.13**, we are able to see two graphs in which the first one shows the average temperature with the samples. The red line shows the temperature for outside(remote) location, and the blue line presents the temperature for inside(local) location. The graph shows that there is a point where the temperature matches at approximately 6.5 samples, then it diverges, and gets closer to eachother again. In the second graph, we are able to see the average humidity which, again, the blue line represents the inside(local) location, and the red line represents the outside(remote) location. The graph shows that the difference between the two locations are greater then converges closer to eachother and starts diverging again.
+
+![Average of sensors for Temperature-Humidity (1)](https://user-images.githubusercontent.com/112055062/207328018-8a99f681-672c-467f-b67f-f2e9d0c14add.png)
+
+**Fig.13** The figure shows the two graphs of average of sensors for temperature and humidity with the comparison between the two sensoring locations: inside(local) and outside(remote)
+
 ## 5. The Local samples are posted to the remote server.
 To fulfill this criteria, we stored the data acquired with the DHT11 sensors located indoors on an online API server http://192.168.6.142/readings. The data is being posted to the server in real time every 5 minutes. 
 
@@ -395,7 +401,7 @@ for sample in readings:
 **Code8** Shows the code of the data written into the CSV file
 
 ![csv image](https://user-images.githubusercontent.com/112055062/207231324-5e2b936e-f8dd-432e-beba-b46cc575bb10.png)
-**Fig.7** Shows the screenshot of the CSV file Database_inside
+**Fig.7** Shows the screenshot of the CSV file Database_inside 
 
 
 ## 6.Create a prediction the subsequent 12 hours for both temperature and humidity.
