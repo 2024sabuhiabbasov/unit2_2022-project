@@ -19,10 +19,10 @@ We will create a device that monitors the temperature and the humidity inside th
 1. The solution provides a visual representation of the Humidity and Temperature values inside a dormitory (Local) and outside the house (Remote) for a period of minimum 48 hours. 
 2. The local variables will be measured using a set of 3 sensors.
 3. The solution provides a mathematical modelling for the Humidity and Temperature levels for each Local and Remote locations.
-5. The solution provides a comparative analysis for the Humidity and Temperature levels for each Local and Remote locations including mean, standad deviation, minimum, maximum, and median.
-6. ```(HL)```The Local samples are posted to the remote server.
-7. Create a prediction the subsequent 12 hours for both temperature and humidity.
-8. A poster summarizing the visual representations, model and analysis is created. The poster includes a recommendation about healthy levels for Temperature and Humidity.
+4. The solution provides a comparative analysis for the Humidity and Temperature levels for each Local and Remote locations including mean, standad deviation, minimum, maximum, and median.
+5. ```(HL)```The Local samples are posted to the remote server.
+6. Create a prediction the subsequent 12 hours for both temperature and humidity.
+7. A poster summarizing the visual representations, model and analysis is created. The poster includes a recommendation about healthy levels for Temperature and Humidity.
 
 # Criteria B: Design
 
@@ -220,6 +220,14 @@ To complete the criteria, we have 3 DHT11 sensors that are connected to a Raspbe
 ## 3. The solution provides a mathematical modelling for the Humidity and Temperature levels for each Local and Remote locations.
 ![Average of sensors for Temperature Inside](https://user-images.githubusercontent.com/111758436/207187630-950ef449-8a65-4b10-9fc3-0f0b17800d23.png)
 ![Average of sensors for Humidity Inside](https://user-images.githubusercontent.com/111758436/207187983-2ec6a359-a2c6-47a2-88bf-9a78147fae57.png)
+
+## 4. The solution provides a comparative analysis for the Humidity and Temperature levels for each Local and Remote locations including mean, standad deviation, minimum, maximum, and median.
+
+## 5. (HL)The Local samples are posted to the remote server.
+## 6.Create a prediction the subsequent 12 hours for both temperature and humidity.
+## 7. A poster summarizing the visual representations, model and analysis is created. The poster includes a recommendation about healthy levels for Temperature and Humidity.
+
+
 
 # Criteria D: Functionality
 
