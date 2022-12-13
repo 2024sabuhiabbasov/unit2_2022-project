@@ -214,24 +214,24 @@ def smoothing(data:list, size_window:int=12)->list:
 
 ![Average of sensors for Temperature-Humidity](https://user-images.githubusercontent.com/111758436/207184962-f6440ccb-76d1-4370-9889-da9b2ce8d5f9.png)
 
-**Fig.7** The figure shows the two graphs of the Average of sensors for Temperature and the Average of sensors for Humidity respectively. The first graph which is the Average of sensors for Temperature consists of two components which are the temperature inside(local) and outside(remote). On the x-axis the graph shows the samples per hour for the temperature, and on the y-axis, the graph shows the temperature in Celcius. The second graph, Average of sensors for Humidity, consists of two components which are the temperature inside(local) and outside(remote). The x-axis of the graph whos Samples per hour for Humidity, while the y-axis shows the percent humidity.
+**Fig.8** The figure shows the two graphs of the Average of sensors for Temperature and the Average of sensors for Humidity respectively. The first graph which is the Average of sensors for Temperature consists of two components which are the temperature inside(local) and outside(remote). On the x-axis the graph shows the samples per hour for the temperature, and on the y-axis, the graph shows the temperature in Celcius. The second graph, Average of sensors for Humidity, consists of two components which are the temperature inside(local) and outside(remote). The x-axis of the graph whos Samples per hour for Humidity, while the y-axis shows the percent humidity.
 
 ## 2.The local variables will be measured using a set of 3 sensors.
 To complete the criteria, we have 3 DHT11 sensors that are connected to a Raspberry pi 4 and each measure the temperature and humidity (see figure 7). We use 3 sensors to get more accurate data just in case one of the sensors is inaccurate the other two could lower the error margin. The measuring device is then placed indoors in the same residence as where Peter, the bird, lives, so the temperature, and humidity measurements is the most accurate and reliable. 
 
 ![3 sensors](https://user-images.githubusercontent.com/112055062/207089251-25ad59e2-0dcf-42c1-bebd-cbdda18916d2.JPG)
 
-**Fig.7** Shows the Raspberry pi 4 connected to the three DHT11 sensors
+**Fig.9** Shows the Raspberry pi 4 connected to the three DHT11 sensors
 
 ![A Distributed Weather Station at R3-14](https://user-images.githubusercontent.com/112055062/207089309-a8355fe6-c88c-4cf6-9b36-85ba4727a892.jpg)
-**Fig.8** Shows the location of the sensoring device in an indoor location
+**Fig.10** Shows the location of the sensoring device in an indoor location
 
 ## 3. The solution provides a mathematical modelling for the Humidity and Temperature levels for each Local and Remote locations.
 From the humidity and temperature that we have collected, we have generated a mathematical model for both humidity and temperature for each local and remote location. The mathematical equation generated is below:
 
 ![Average of sensors for Temperature Inside](https://user-images.githubusercontent.com/112055062/207272287-25a4ede6-fd58-4d0e-8a7e-b5b604d568f8.png)
 
-**Fig.9** The figure above shows the graph for the average of sensors for the temperature inside (local). The equation for this mathematical model is **y = 0.000123x<sup>2</sup>-0.006x+22.73** which is a quadratic equation.
+**Fig.11** The figure above shows the graph for the average of sensors for the temperature inside (local). The equation for this mathematical model is **y = 0.000123x<sup>2</sup>-0.006x+22.73** which is a quadratic equation.
 
 ```.py
 values = []
@@ -255,7 +255,7 @@ a1, b1, c1 = np.polyfit(x, mean_per_hour, 2)
 
 ![Average of sensors for Humidity Inside (1)](https://user-images.githubusercontent.com/112055062/207273226-d467f2c5-3e7a-4c4c-bd66-7cb0b9b17124.png)
 
-**Fig.10** The figure above shows the graph for the Average of Sensors for Humidity Inside(local). The equation for this mathematical model is **y=-0.0000083x<sup>2</sup>+0.003x+19.85** which is a quadratic equation.
+**Fig.12** The figure above shows the graph for the Average of Sensors for Humidity Inside(local). The equation for this mathematical model is **y=-0.0000083x<sup>2</sup>+0.003x+19.85** which is a quadratic equation.
 
 
 ```.py
@@ -282,7 +282,7 @@ a1, b1, c1 = np.polyfit(x, mean_per_hour, 2)
 
 ![Temperature outside - line - equation](https://user-images.githubusercontent.com/112055062/207268274-3796c0f0-3e9d-4f4d-967b-4cb34e4ea383.png)
 
-**Fig.11** The figure above shows the graph for the Temperature Outside(remote) to the samples per hour. The equation for this mathematical model is a polynomial equation which is **y=-0.0000000017x<sup>3</sup>-000004.5x<sup>2</sup>-0.0007x+25.34**.
+**Fig.13** The figure above shows the graph for the Temperature Outside(remote) to the samples per hour. The equation for this mathematical model is a polynomial equation which is **y=-0.0000000017x<sup>3</sup>-000004.5x<sup>2</sup>-0.0007x+25.34**.
 
 ```.py
 for i in range(len(Sensor_5)):
@@ -297,10 +297,10 @@ y = []
 a1, b1, c1, d1 = np.polyfit(sample, mean_per_hour_outside_h, 3)
 print(a1, b1, c1, d1)
 ```
-**Code5** The code above shows how we used the NumPy library to get the equation. We generated the 2 lists for each axis in which the x-axis is 'sample' and the y-axis is 'mean_per_hour_outside_h. We then use NumPy to look for the coefficient of x to the power of 3,2,1,0 by naming a1,b1,c1,d1 respectively. The mathematical model is polynomial with degree 3, so we can find the equation from the 2 lists and the information that the model is a third degree polynomial.
+**Code6** The code above shows how we used the NumPy library to get the equation. We generated the 2 lists for each axis in which the x-axis is 'sample' and the y-axis is 'mean_per_hour_outside_h. We then use NumPy to look for the coefficient of x to the power of 3,2,1,0 by naming a1,b1,c1,d1 respectively. The mathematical model is polynomial with degree 3, so we can find the equation from the 2 lists and the information that the model is a third degree polynomial.
 
 ![Humidity outside - line - equation](https://user-images.githubusercontent.com/112055062/207268303-b12d46f3-2a0e-40fd-b164-03ea6017dbe3.png)
-**Fig.12** The figure above shows the graph for the humidity outside(remote) to the samples per hour. The equation for this mathematical model is a polynomial equation which is **y=-0.0000000032x<sup>3</sup>+0.0001x<sup>2</sup>-0.002x+23.72**
+**Fig.14** The figure above shows the graph for the humidity outside(remote) to the samples per hour. The equation for this mathematical model is a polynomial equation which is **y=-0.0000000032x<sup>3</sup>+0.0001x<sup>2</sup>-0.002x+23.72**
 
 ```.py
 sample = []  # empty list
@@ -319,7 +319,7 @@ for i in range(0, len(mean_per_hour_outside_h)):
 y = []
 a1, b1, c1, d1 = np.polyfit(sample, mean_per_hour_outside_h, 3)
 ```
-**Code6** The code above shows how the mathematical model for the humidity to the sample is by using NumPy. The two lists of x and y axis are sample and mean_per_hour_outside_h. The mathematical model is a 3rd degree polynomial. The equation is given by giving out the coefficients a1, b1, c1, d1 which forms the equation. 
+**Code7** The code above shows how the mathematical model for the humidity to the sample is by using NumPy. The two lists of x and y axis are sample and mean_per_hour_outside_h. The mathematical model is a 3rd degree polynomial. The equation is given by giving out the coefficients a1, b1, c1, d1 which forms the equation. 
 
 ## 4. The solution provides a comparative analysis for the Humidity and Temperature levels for each Local and Remote locations including mean, standad deviation, minimum, maximum, and median.
 
@@ -327,7 +327,7 @@ To provide a comparative analysis, we created a graph where we compare the tempe
 
 ![Average of sensors for Temperature-Humidity (1)](https://user-images.githubusercontent.com/112055062/207328018-8a99f681-672c-467f-b67f-f2e9d0c14add.png)
 
-**Fig.13** The figure shows the two graphs of average of sensors for temperature and humidity with the comparison between the two sensoring locations: inside(local) and outside(remote)
+**Fig.15** The figure shows the two graphs of average of sensors for temperature and humidity with the comparison between the two sensoring locations: inside(local) and outside(remote)
 
 ## 5. The Local samples are posted to the remote server.
 To fulfill this criteria, we stored the data acquired with the DHT11 sensors located indoors on an online API server http://192.168.6.142/readings. The data is being posted to the server in real time every 5 minutes. 
@@ -365,12 +365,12 @@ while True:
     time.sleep(300)
 ```
 
-**Code7** This is the code that is used to send the temperature and humidity which is being sent to the online API server http://192.168.6.142/readings every 5 minutes. We used the library Adafruit_DHT which is used with the DHT11 sensors. Then, we created a function called data_reader to return the temperature and humidity. The data is then sent to the server. To send the data to the server, we also need to have authorization using access token with a username and password. 
+**Code8** This is the code that is used to send the temperature and humidity which is being sent to the online API server http://192.168.6.142/readings every 5 minutes. We used the library Adafruit_DHT which is used with the DHT11 sensors. Then, we created a function called data_reader to return the temperature and humidity. The data is then sent to the server. To send the data to the server, we also need to have authorization using access token with a username and password. 
 
 
 <img width="1249" alt="data in server" src="https://user-images.githubusercontent.com/112055062/207038574-7ef259ff-d995-48d2-9738-f786076aecda.png">
 
-**Fig.6** Shows a section of the online API server http://192.168.6.142/readings where the data is being stored in real time every 5 minutes
+**Fig.16** Shows a section of the online API server http://192.168.6.142/readings where the data is being stored in real time every 5 minutes
 
 ```.py
 import requests
@@ -399,13 +399,13 @@ for sample in readings:
         with open("Database_inside", "a") as file:
             file.write(f"{sample['datetime']},{sample['sensor_id']},{sample['value']}\n")
 ```
-**Code8** Shows the code of the data written into the CSV file
+**Code9** Shows the code of the data written into the CSV file
 
 ![csv image](https://user-images.githubusercontent.com/112055062/207231324-5e2b936e-f8dd-432e-beba-b46cc575bb10.png)
-**Fig.7** Shows the screenshot of the CSV file Database_inside 
-
+**Fig.17** Shows the screenshot of the CSV file Database_inside 
 
 ## 6.Create a prediction the subsequent 12 hours for both temperature and humidity.
+
 ## 7. A poster summarizing the visual representations, model and analysis is created. The poster includes a recommendation about healthy levels for Temperature and Humidity.
 
 # Criteria D: Functionality
