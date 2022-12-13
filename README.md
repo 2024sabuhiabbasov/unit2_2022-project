@@ -76,18 +76,20 @@ We will create a device that monitors the temperature and the humidity inside th
 | 4 |Code the program to get the data | To be able to control and get data from the sensor | 1 hr | Dec 8| C|
 | 5 | Connect the raspberry pi and the sensor | To get temperature and humidity from the sensor | 1hr | Dec 8 | C|
 |6| Create flowchart for getting temperature and humidity data| To illustrate the code in a clearer picture|20 min| Dec11| B|
-|7| Create menu for the sensing device | To allow the client to choose what they want to know about the temperature and the humidity|1 hr| Dec 11|  C|
-|8| Code option 1 of the menu : Information about health temperature and humidity for the bird | To show the basic information about what the bird needs in order to survive | 1 hr|Dec11| C|
-|9| Code option 4 of the menu: About menu | To let the client know what the program is about| 1 hr | Dec 11 | C|
-|10|Create test plan table| to let the users see that the functions are working| 10 min| Dec11 | B|
-|11|Edit System Diagram | To show the client how the sensoring device works with all the elements from the program to the hardware| 20 min| 11 Dec | B|
-|12|Create flowchart #2 for function smoothing | To show the client a clearer picture on how the code works | 20 min| Dec 12| B|
-|13|Write Design Statement| To let the client understand the process of getting the solutin is like | 30 min| Dec 12|A|
-|14| Write list of techniques used| To show what techniques were used in the design process of the product| 20 min | Dec 12 | D|
-|15| Write the data storing method | To show how the data is being stored and to show the reliability and safety of the storing method | 30 min| Dec 12| B|
-|16| Write the development section to fulfill success criteria 1| To show the clients what actions have been done to meet the needs of the client| 40 min| Dec 12|C|
-|17| Write the development section to fulfill success criteria 2| To show the clients the method that is used in order to get 3 sensors| 30 min| Dec12| C|
-|18| Write the development section to fulfill success criteria 3,4,5| To explain the work that has been done to complete the criteria| 3 hr| Dec 12 | C|
+|7|Create test plan table| to let the users see that the functions are working| 10 min| Dec11 | B|
+|8|Edit System Diagram | To show the client how the sensoring device works with all the elements from the program to the hardware| 20 min| 11 Dec | B|
+|9|Create flowchart #2 for function smoothing | To show the client a clearer picture on how the code works | 20 min| Dec 12| B|
+|10|Write Design Statement| To let the client understand the process of getting the solutin is like | 30 min| Dec 12|A|
+|11| Write list of techniques used| To show what techniques were used in the design process of the product| 20 min | Dec 12 | D|
+|12| Write the data storing method | To show how the data is being stored and to show the reliability and safety of the storing method | 30 min| Dec 12| B|
+|12| Making a graph for temperature inside with error bars | To show how the data looks on a graph for better visualization for the client | 20 min | Dec 12| C|
+|13| Making a graph for humidity inside with error bars | To show how the data looks on a graph for better visualization for the client | 20 min | Dec 12| C|
+|14| Making a graph made of two graphs for temperature and humidity | To make it easier for the client to compare data inside and outside for Temperature and Humidity | 20 min | Dec 12 | C|
+|15| Making a graph for temperature outside | To show how the data looks on a graph for better visualization for the client | 20 min | Dec 12| C|
+|16| Making a graph for humidity outside | To show how the data looks on a graph for better visualization for the client | 20 min | Dec 12| C|
+|17| Write the development section to fulfill success criteria 1| To show the clients what actions have been done to meet the needs of the client| 40 min| Dec 12|C|
+|18| Write the development section to fulfill success criteria 2| To show the clients the method that is used in order to get 3 sensors| 30 min| Dec12| C|
+|19| Write the development section to fulfill success criteria 3,4,5| To explain the work that has been done to complete the criteria| 3 hr| Dec 12 | C|
 
 
 
