@@ -505,9 +505,11 @@ To fulfill criteria 6, we predicted the temperature and humidity of the next sub
 
 ![Cartaz  para Imprimir Comemoração Dia do Garçom Cinza e Preto ](https://user-images.githubusercontent.com/112055062/207363062-9835cc8f-9d8c-46a9-9cdc-f29c02606673.jpg)
 
-![Cartaz  para Imprimir Comemoração Dia do Garçom Cinza e Preto ](https://user-images.githubusercontent.com/112055062/207363097-1542595b-2574-464c-b155-bbd2c01ebc99.png)
+![Cartaz  para Imprimir Comemoração Dia do Garçom Cinza e Preto  (1)](https://user-images.githubusercontent.com/112055062/207367006-c426251d-0a9e-4874-8b15-0e276ac9737c.png)
 
-**Fig.18 & 19** Shows the poster which fulfills criteria 7, summarizing the visual representations, model and analysis is created. The poster includes a recommendation about healthy levels for Temperature and Humidity
+![Cartaz  para Imprimir Comemoração Dia do Garçom Cinza e Preto  (2)](https://user-images.githubusercontent.com/112055062/207367160-04572a61-ad91-479a-b86a-e27c9197e396.png)
+
+**Fig.20 & 21** Shows the poster which fulfills criteria 7, summarizing the visual representations, model and analysis is created. The poster includes a recommendation about healthy levels for Temperature and Humidity
 
 
 # Criteria D: Functionality
