@@ -273,7 +273,38 @@ while True:
 
 **Fig.6** Shows a section of the online API server http://192.168.6.142/readings where the data is being stored in real time every 5 minutes
 
-**Code1** Shows the code of the data being put into the CSV file. 
+```.py
+import requests
+
+req = requests.get('http://192.168.6.142/readings')
+data = req.json()
+readings = data['readings'][0]
+
+for sample in readings:
+    if sample['sensor_id'] == 507:
+        with open("Database_inside", "a") as file:
+            file.write(f"{sample['datetime']},{sample['sensor_id']},{sample['value']}\n")
+    elif sample['sensor_id'] == 508:
+        with open("Database_inside", "a") as file:
+            file.write(f"{sample['datetime']},{sample['sensor_id']},{sample['value']}\n")
+    elif sample['sensor_id'] == 509:
+        with open("Database_inside", "a") as file:
+            file.write(f"{sample['datetime']},{sample['sensor_id']},{sample['value']}\n")
+    elif sample['sensor_id'] == 510:
+        with open("Database_inside", "a") as file:
+            file.write(f"{sample['datetime']},{sample['sensor_id']},{sample['value']}\n")
+    elif sample['sensor_id'] == 511:
+        with open("Database_inside", "a") as file:
+            file.write(f"{sample['datetime']},{sample['sensor_id']},{sample['value']}\n")
+    elif sample['sensor_id'] == 512:
+        with open("Database_inside", "a") as file:
+            file.write(f"{sample['datetime']},{sample['sensor_id']},{sample['value']}\n")
+```
+**Code5** Shows the code of the data written into the CSV file
+
+![csv image](https://user-images.githubusercontent.com/112055062/207231324-5e2b936e-f8dd-432e-beba-b46cc575bb10.png)
+**Fig.7** Shows the screenshot of the CSV file Database_inside
+
 
 ## 6.Create a prediction the subsequent 12 hours for both temperature and humidity.
 ## 7. A poster summarizing the visual representations, model and analysis is created. The poster includes a recommendation about healthy levels for Temperature and Humidity.
