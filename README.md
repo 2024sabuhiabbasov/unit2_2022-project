@@ -228,11 +228,20 @@ To complete the criteria, we have 3 DHT11 sensors that are connected to a Raspbe
 ## 3. The solution provides a mathematical modelling for the Humidity and Temperature levels for each Local and Remote locations.
 From the humidity and temperature that we have collected, we have generated a mathematical model for both humidity and temperature for each local and remote location. The mathematical equation generated is below:
 
-![Average of sensors for Temperature Inside](https://user-images.githubusercontent.com/111758436/207187630-950ef449-8a65-4b10-9fc3-0f0b17800d23.png)
-**Fig.9** The figure above shows the graph for the average of sensors for the temperature inside (local). The equation for this mathematical model is **y = -00007.9(x<sup>2</sup>)+0.01x+22.2** It is a quadratic equation which is generated using NumPy with the code below:
+![Average of sensors for Temperature Inside](https://user-images.githubusercontent.com/112055062/207272287-25a4ede6-fd58-4d0e-8a7e-b5b604d568f8.png)
 
-![Average of sensors for Humidity Inside](https://user-images.githubusercontent.com/112055062/207267396-cce2f447-fd18-4737-b737-aafbfe363c4d.png)
-**Fig.10** The figure above shows the graph for the Average of Sensors for Humidity Inside(local). The equation for this mathematical model is **y=-00007.9x<sup>2</sup>+0.01x+22.2** It is a quadratic equation which is generated using NumPy with the code below:
+**Fig.9** The figure above shows the graph for the average of sensors for the temperature inside (local). The equation for this mathematical model is **y = 0.000123x<sup>2</sup>)-0.006x+22.73** It is a quadratic equation which is generated using NumPy with the code below:
+
+
+**Fig.10** The figure above shows the graph for the Average of Sensors for Humidity Inside(local). The equation for this mathematical model is **y=-0.0000083x<sup>2</sup>+0.003x+19.85** It is a quadratic equation which is generated using NumPy with the code below:
+
+![Temperature outside - line - equation](https://user-images.githubusercontent.com/112055062/207268274-3796c0f0-3e9d-4f4d-967b-4cb34e4ea383.png)
+
+**Fig.11** The figure above shows the graph for the Temperature Outside(remote) to the samples per hour. The equation for this mathematical model is a quadratic equation which is generated using NumPy with the code below:
+
+![Humidity outside - line - equation](https://user-images.githubusercontent.com/112055062/207268303-b12d46f3-2a0e-40fd-b164-03ea6017dbe3.png)
+
+
 
 ## 4. The solution provides a comparative analysis for the Humidity and Temperature levels for each Local and Remote locations including mean, standad deviation, minimum, maximum, and median.
 
