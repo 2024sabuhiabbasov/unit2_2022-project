@@ -113,7 +113,7 @@ The data is not only stored in the online server, but also in a comma separated 
 
 ![csv image](https://user-images.githubusercontent.com/112055062/207229610-c8bf7db0-0321-46a7-bd9c-5fd92ef6c091.png)
 
-**Fig.7** Shows a screenshot of the CSV file, Database_inside
+**Fig.7** Shows a screenshot of the CSV file, Database_inside which contains the information of the datetime, sensor id, and value of temperature and humidity.
 
 # Criteria C: Development
 
@@ -231,7 +231,7 @@ From the humidity and temperature that we have collected, we have generated a ma
 ![Average of sensors for Temperature Inside](https://user-images.githubusercontent.com/111758436/207187630-950ef449-8a65-4b10-9fc3-0f0b17800d23.png)
 **Fig.9** The figure above shows the graph for the average of sensors for the temperature inside (local). The equation for this mathematical model is **y = -00007.9(x<sup>2</sup>)+0.01x+22.2** It is a quadratic equation which is generated using NumPy with the code below:
 
-![Average of sensors for Humidity Inside](https://user-images.githubusercontent.com/111758436/207187983-2ec6a359-a2c6-47a2-88bf-9a78147fae57.png)
+![Average of sensors for Humidity Inside](https://user-images.githubusercontent.com/112055062/207267396-cce2f447-fd18-4737-b737-aafbfe363c4d.png)
 **Fig.10** The figure above shows the graph for the Average of Sensors for Humidity Inside(local). The equation for this mathematical model is **y=-00007.9x<sup>2</sup>+0.01x+22.2** It is a quadratic equation which is generated using NumPy with the code below:
 
 ## 4. The solution provides a comparative analysis for the Humidity and Temperature levels for each Local and Remote locations including mean, standad deviation, minimum, maximum, and median.
