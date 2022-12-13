@@ -256,7 +256,6 @@ a1, b1, c1 = np.polyfit(x, mean_per_hour, 2)
 
 **Fig.10** The figure above shows the graph for the Average of Sensors for Humidity Inside(local). The equation for this mathematical model is **y=-0.0000083x<sup>2</sup>+0.003x+19.85** which is a quadratic equation.
 
-![Temperature outside - line - equation](https://user-images.githubusercontent.com/112055062/207268274-3796c0f0-3e9d-4f4d-967b-4cb34e4ea383.png)
 
 ```.py
 values = []
@@ -279,6 +278,8 @@ for i in range(len(values[0])):
 a1, b1, c1 = np.polyfit(x, mean_per_hour, 2)
 ```
 **Code5** The code above shows how the mathematical equation is being calculated by using the library NumPy. The x and y axis of the graph is x, and mean_per_hour respectively. The mathematical model is a quadratic equation with coefficients: a1,b1,c1. With the coefficients, the equation can be found. 
+
+![Temperature outside - line - equation](https://user-images.githubusercontent.com/112055062/207268274-3796c0f0-3e9d-4f4d-967b-4cb34e4ea383.png)
 
 **Fig.11** The figure above shows the graph for the Temperature Outside(remote) to the samples per hour. The equation for this mathematical model is a polynomial equation which is **y=-0.0000000017x<sup>3</sup>-000004.5x<sup>2</sup>-0.0007x+25.34**.
 
