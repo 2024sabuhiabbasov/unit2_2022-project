@@ -238,10 +238,10 @@ From the humidity and temperature that we have collected, we have generated a ma
 
 ![Temperature outside - line - equation](https://user-images.githubusercontent.com/112055062/207268274-3796c0f0-3e9d-4f4d-967b-4cb34e4ea383.png)
 
-**Fig.11** The figure above shows the graph for the Temperature Outside(remote) to the samples per hour. The equation for this mathematical model is a polynomial equation which is **-0.0000000017x<sup>3</sup>-000004.5x<sup>2</sup>-0.0007x+25.34**.
+**Fig.11** The figure above shows the graph for the Temperature Outside(remote) to the samples per hour. The equation for this mathematical model is a polynomial equation which is **y=-0.0000000017x<sup>3</sup>-000004.5x<sup>2</sup>-0.0007x+25.34**.
 
 ![Humidity outside - line - equation](https://user-images.githubusercontent.com/112055062/207268303-b12d46f3-2a0e-40fd-b164-03ea6017dbe3.png)
-**Fig.12** The figure above shows the graph for the humidity outside(remote) to the samples per hour. The equation for this mathematical model is a polynomial equation which is **-0.0000000032x<sup>3</sup>+0.0001x<sup>2</sup>-0.002x+23.72**
+**Fig.12** The figure above shows the graph for the humidity outside(remote) to the samples per hour. The equation for this mathematical model is a polynomial equation which is **y=-0.0000000032x<sup>3</sup>+0.0001x<sup>2</sup>-0.002x+23.72**
 
 ## 4. The solution provides a comparative analysis for the Humidity and Temperature levels for each Local and Remote locations including mean, standad deviation, minimum, maximum, and median.
 
