@@ -229,7 +229,7 @@ To complete the criteria, we have 3 DHT11 sensors that are connected to a Raspbe
 From the humidity and temperature that we have collected, we have generated a mathematical model for both humidity and temperature for each local and remote location. The mathematical equation generated is below:
 
 ![Average of sensors for Temperature Inside](https://user-images.githubusercontent.com/111758436/207187630-950ef449-8a65-4b10-9fc3-0f0b17800d23.png)
-**Fig.9** The figure above shows the graph for the average of sensors for the temperature inside (local). The equation for this mathematical model is **y = -00007.9(x^2)+0.01x+22.2** It is a quadratic equation which is generated using NumPy with the code below:
+**Fig.9** The figure above shows the graph for the average of sensors for the temperature inside (local). The equation for this mathematical model is **y = -00007.9(x<sup>2</sup>)+0.01x+22.2** It is a quadratic equation which is generated using NumPy with the code below:
 
 ![Average of sensors for Humidity Inside](https://user-images.githubusercontent.com/111758436/207187983-2ec6a359-a2c6-47a2-88bf-9a78147fae57.png)
 
