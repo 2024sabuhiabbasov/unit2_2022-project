@@ -232,6 +232,7 @@ From the humidity and temperature that we have collected, we have generated a ma
 
 **Fig.9** The figure above shows the graph for the average of sensors for the temperature inside (local). The equation for this mathematical model is **y = 0.000123x<sup>2</sup>)-0.006x+22.73** It is a quadratic equation which is generated using NumPy with the code below:
 
+![Average of sensors for Humidity Inside (1)](https://user-images.githubusercontent.com/112055062/207273226-d467f2c5-3e7a-4c4c-bd66-7cb0b9b17124.png)
 
 **Fig.10** The figure above shows the graph for the Average of Sensors for Humidity Inside(local). The equation for this mathematical model is **y=-0.0000083x<sup>2</sup>+0.003x+19.85** It is a quadratic equation which is generated using NumPy with the code below:
 
