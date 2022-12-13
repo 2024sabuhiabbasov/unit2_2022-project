@@ -105,7 +105,7 @@ For example, this data, {"value": 22.0, "id": 65010, "datetime": "2022-12-12T19:
 
 <img width="1249" alt="data in server" src="https://user-images.githubusercontent.com/112055062/207038574-7ef259ff-d995-48d2-9738-f786076aecda.png">
 
-**Fig.5** Shows a section of the online API server http://192.168.6.142/readings where the data is being stored in real time every 5 minutes
+**Fig.6** Shows a section of the online API server http://192.168.6.142/readings where the data is being stored in real time every 5 minutes
 
 
 # Criteria C: Development
@@ -138,6 +138,8 @@ The following are what we developed from the client’s success criteria.
 To provide a visual representation of the temperature and humidity values, we requested the data of the indoor sensor from the server which we have sent real time data every 5 minutes for 48 hours and the outdoor data from the same server. Then, we smoothed the data with a size window of 12 samples to eliminate the outliers for a more accurate result.  After we get the smoothed data from all sensors, we calculate the mean of the data from the 3 sensors.  The data is then merged into one list for each temperature and humidity outside and inside the residence. With the clean data, we use Matplotlib which is a plotting diagram library for Python to plot a graph that shows the relationship between the change in temperature/humidity and the number of samples.
 
 ![Average of sensors for Temperature-Humidity](https://user-images.githubusercontent.com/111758436/207184962-f6440ccb-76d1-4370-9889-da9b2ce8d5f9.png)
+
+**Fig.7** The figure shows the two graphs of the Average of sensors for Temperature and the Average of sensors for Humidity respectively. The first graph which is the Average of sensors for Temperature consists of two components which are the temperature inside(local) and outside(remote). On the x-axis the graph shows the samples per hour for the temperature, and on the y-axis, the graph shows the temperature in Celcius. The second graph, Average of sensors for Humidity, consists of two components which are the temperature inside(local) and outside(remote). The x-axis of the graph whos Samples per hour for Humidity, while the y-axis shows the percent humidity.
 
 ```.py
 sensors_temperature = [507, 508, 509]
