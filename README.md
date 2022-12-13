@@ -491,6 +491,16 @@ for sample in readings:
 
 ## 6.Create a prediction the subsequent 12 hours for both temperature and humidity.
 
+To fulfill criteria 6, we predicted the temperature and humidity of the next subsequent 12 hours by looking at the pattern of the previous data that we have collected. The data has a repeating pattern in each day, which we can use to find a mathematical equation that will work for the next 12 hours as well. Once we got the mathematical equation, we generate a graph which could be the prediction of the next subsequent data.
+
+![Predicted data for 12 hours - temperature inside](https://user-images.githubusercontent.com/112055062/207365447-3278203d-3c72-477e-ad76-e1c798047789.png)
+
+**Fig.18** Presents the predicted data for the next subsequent 12 hours for the Temperature of the inside(local) location
+
+![Predicted data for 12 hours - humidity inside](https://user-images.githubusercontent.com/112055062/207365771-a97e2502-c258-4516-815b-1fde1975a4df.png)
+
+**Fig.19** Presents the predicted data for the next subsequent 12 hours for the Humidity of the inside(local) location
+
 ## 7. A poster summarizing the visual representations, model and analysis is created. The poster includes a recommendation about healthy levels for Temperature and Humidity.
 
 ![Cartaz  para Imprimir Comemoração Dia do Garçom Cinza e Preto ](https://user-images.githubusercontent.com/112055062/207363062-9835cc8f-9d8c-46a9-9cdc-f29c02606673.jpg)
