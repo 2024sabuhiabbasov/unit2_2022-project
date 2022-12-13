@@ -57,6 +57,10 @@ To complete the criteria, we have 3 DHT11 sensors that are connected to a Raspbe
 
 **Fig.4**  The figure shows the flow diagram of a function called “smoothing”. The function is used to smooth out the data which means that the function groups data next to each other according to the size window, finds the average, then puts it into a new list. The function inputs 2 things: the data list, and the size window. Then the mean of data from each window is calculated, and being put back to the list x and y. 
 
+![flow diagram for get data outside](https://user-images.githubusercontent.com/112055062/207192925-4aef9a44-b765-4dd9-8407-85449d1e17f4.jpg)
+
+**Fig.5** Shows the flow diagram of how the data was received from the remote sensor outdoors which its data is uploaded on an online API server http://192.168.6.142/readings. We requested the data by using the function get_sensor, then we created a list out of the data, and finally generated a diagram it. The program will generate two diagrams as Sensor_4 monitors the humidity of the remote location, and sensor_5 monitors the temperature. 
+
 
 ## Test Plan
 | Description | Type | Inputs | Outputs | 
