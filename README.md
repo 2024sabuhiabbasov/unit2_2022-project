@@ -493,6 +493,13 @@ for sample in readings:
 
 ## 7. A poster summarizing the visual representations, model and analysis is created. The poster includes a recommendation about healthy levels for Temperature and Humidity.
 
+![Cartaz  para Imprimir Comemoração Dia do Garçom Cinza e Preto ](https://user-images.githubusercontent.com/112055062/207363062-9835cc8f-9d8c-46a9-9cdc-f29c02606673.jpg)
+
+![Cartaz  para Imprimir Comemoração Dia do Garçom Cinza e Preto ](https://user-images.githubusercontent.com/112055062/207363097-1542595b-2574-464c-b155-bbd2c01ebc99.png)
+
+**Fig.18 & 19** Shows the poster which fulfills criteria 7, summarizing the visual representations, model and analysis is created. The poster includes a recommendation about healthy levels for Temperature and Humidity
+
+
 # Criteria D: Functionality
 
 A 7 min video demonstrating the proposed solution with narration
