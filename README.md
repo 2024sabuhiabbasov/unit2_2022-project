@@ -219,6 +219,7 @@ def smoothing(data:list, size_window:int=12)->list:
 To complete the criteria, we have 3 DHT11 sensors that are connected to a Raspberry pi 4 and each measure the temperature and humidity (see figure 7). We use 3 sensors to get more accurate data just in case one of the sensors is inaccurate the other two could lower the error margin. The measuring device is then placed indoors in the same residence as where Peter, the bird, lives, so the temperature, and humidity measurements is the most accurate and reliable. 
 
 ![3 sensors](https://user-images.githubusercontent.com/112055062/207089251-25ad59e2-0dcf-42c1-bebd-cbdda18916d2.JPG)
+
 **Fig.7** Shows the Raspberry pi 4 connected to the three DHT11 sensors
 
 ![A Distributed Weather Station at R3-14](https://user-images.githubusercontent.com/112055062/207089309-a8355fe6-c88c-4cf6-9b36-85ba4727a892.jpg)
