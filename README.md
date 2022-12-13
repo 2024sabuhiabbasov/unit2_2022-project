@@ -111,34 +111,7 @@ For example, this data, {"value": 22.0, "id": 65010, "datetime": "2022-12-12T19:
 ## 2. Comma Separated Value File (CSV)
 The data is not only stored in the online server, but also in a comma separated value file which we created called "Database". The format of the data is the same as the one stored in the online server which provides the information of the value, id, datetime, and sensor id. 
 
-```.py
-import requests
-
-req = requests.get('http://192.168.6.142/readings')
-data = req.json()
-readings = data['readings'][0]
-
-for sample in readings:
-    if sample['sensor_id'] == 507:
-        with open("Database", "a") as file:
-            file.write(f"{sample}")
-    elif sample['sensor_id'] == 508:
-        with open("Database", "a") as file:
-            file.write(f"{sample}")
-    elif sample['sensor_id'] == 509:
-        with open("Database", "a") as file:
-            file.write(f"{sample}")
-    elif sample['sensor_id'] == 510:
-        with open("Database", "a") as file:
-            file.write(f"{sample}")
-    elif sample['sensor_id'] == 511:
-        with open("Database", "a") as file:
-            file.write(f"{sample}")
-    elif sample['sensor_id'] == 512:
-        with open("Database", "a") as file:
-            file.write(f"{sample}")
-```
-The following shows the code of the data being put in the CSV file
+**Fig.7** Shows a screenshot of the CSV file which stores the data
 
 # Criteria C: Development
 
@@ -255,7 +228,75 @@ To complete the criteria, we have 3 DHT11 sensors that are connected to a Raspbe
 
 ## 4. The solution provides a comparative analysis for the Humidity and Temperature levels for each Local and Remote locations including mean, standad deviation, minimum, maximum, and median.
 
-## 5. (HL)The Local samples are posted to the remote server.
+## 5. The Local samples are posted to the remote server.
+To fulfill this criteria, we stored the data acquired with the DHT11 sensors located indoors on an online API server http://192.168.6.142/readings. The data is being posted to the server in real time every 5 minutes. 
+
+```.py
+import Adafruit_DHT
+import time
+import requests
+from datetime import datetime
+
+DHT_SENSOR = Adafruit_DHT.DHT11
+
+def data_reader(pin_number: int)->str:
+    humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR, pin_number)
+    while temperature == 0 and humidity == 0:
+        humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR, pin_number)
+    return temperature, humidity
+
+while True:
+    user = {"username": "test", 'password': 'test1234'}
+    req = requests.post('http://192.168.6.142/login', json=user)
+    req = req.json()
+    access_token = req["access_token"]
+    auth = {"Authorization": f"Bearer {access_token}"}
+    data = []
+    for i in range(2, 5):
+        data = data_reader(i)
+        print(data)
+        new_record_temperature = {"datetime": datetime.isoformat(datetime.now()), "sensor_id": (i +505), "value": data[0]}
+        r_temperature = requests.post('http://192.168.6.142/reading/new', json=new_record_temperature, headers=auth)
+        new_record_humidity = {"datetime": datetime.isoformat(datetime.now()), "sensor_id": (i + 508), "value": data[1]}
+        r_humidity = requests.post('http://192.168.6.142/reading/new', json=new_record_humidity, headers=auth)
+        print(r_temperature.json())
+        print(r_humidity.json())
+    time.sleep(300)
+```
+
+
+<img width="1249" alt="data in server" src="https://user-images.githubusercontent.com/112055062/207038574-7ef259ff-d995-48d2-9738-f786076aecda.png">
+
+**Fig.6** Shows a section of the online API server http://192.168.6.142/readings where the data is being stored in real time every 5 minutes
+
+```.py
+import requests
+
+req = requests.get('http://192.168.6.142/readings')
+data = req.json()
+readings = data['readings'][0]
+
+for sample in readings:
+    if sample['sensor_id'] == 507:
+        with open("Database", "a") as file:
+            file.write(f"{sample}")
+    elif sample['sensor_id'] == 508:
+        with open("Database", "a") as file:
+            file.write(f"{sample}")
+    elif sample['sensor_id'] == 509:
+        with open("Database", "a") as file:
+            file.write(f"{sample}")
+    elif sample['sensor_id'] == 510:
+        with open("Database", "a") as file:
+            file.write(f"{sample}")
+    elif sample['sensor_id'] == 511:
+        with open("Database", "a") as file:
+            file.write(f"{sample}")
+    elif sample['sensor_id'] == 512:
+        with open("Database", "a") as file:
+            file.write(f"{sample}")
+```
+**Code1** Shows the code of the data being put into the CSV file. 
 ## 6.Create a prediction the subsequent 12 hours for both temperature and humidity.
 ## 7. A poster summarizing the visual representations, model and analysis is created. The poster includes a recommendation about healthy levels for Temperature and Humidity.
 
