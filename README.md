@@ -65,9 +65,19 @@ To complete the criteria, we have 3 DHT11 sensors that are connected to a Raspbe
 ## Test Plan
 | Description | Type | Inputs | Outputs | 
 | ----------- | ---- | ------ | ------- |
-|Menu program check|Unit test, White box, functional|1.Enter all the options 1-5 from the menu 2.Enter other numbers apart from options 1-5 |If the number entered is from 1-5, the program returns the result from the correct options. If the input is not 1-5, the program should make the user enter another number|
-|Check option 1| Unit test, White box, Functional| Input option 1 to the menu | The program returns the information about the bird's health information, humidity, and temperature|
-|Check option 4|  Unit test, White box, Functional| Input option 4 to the menu | The program returns the information about what the sensor device is|
+|Check the diagrams for outside temperature and humidity | White Box, Functional, Unit testing| Run the code to show the graph | It shows the correct diagram|
+|Check the diagrams for inside temperature and humidity |White Box, Functional, Unit testing | Run the code to show the graph | It shows the correct diagram|
+|Check the diagram with error bars for inside temperature | White Box, Functional, Unit testing| Run the code to show the graph | It shows the correct diagram|
+|Check the diagram with error bars for inside humidity |White box, functional, unit testing | Run the code to show the graph | It shows the correct diagram|
+|Check the diagram for inside and outside temperature | White box, functional, unit testing | Run the code to show the graph | It shows the correct diagram|
+|Check new_recording.py |Integration testing, functional, white box | Run the code to see if it sends new data for every 5 minutes | We saw that it stops after 20 minutes, so we added authentication line to while loop|
+|Check the server | whitebox, functional, integration testing| Visit 192.168.6.142/readings to see if the server has our data | It shows all data we have sent|
+|Check the diagrams for outside temperature and humidity by Rza | Black box, non-functional | Run the code to show the graph by someone as if he was the client | Black box, functional, integration testing |It shows the correct diagram|
+|Check the diagrams for inside temperature and humidity by Rza |Black box, non-functional | Run the code to show the graph by someone as if he was the client | It shows the correct diagram|
+|Check the diagram with error bars for inside temperature by Rza | Black box, non-functional | Run the code to show the graph by someone as if he was the client | It shows the correct diagram|
+|Check the diagram with error bars for inside humidity by Rza |Black box, non-functional | Run the code to show the graph by someone as if he was the client | It shows the correct diagram|
+|Check the diagram for inside and outside temperature by Rza |Black box, non-functional | Run the code to show the graph by someone as if he was the client | It shows the correct diagram|
+
 
 **Table 1** The test plan shows how the program has been tested. The types of tests that are implemented are Unit Testing, Integration, and System Testing. The input in the table is the steps to follow in testing the functions and the output is what the program should return in the test. The test also include white box testing which is done by the developer who knows the code behind the program and black box testing done by other people who do not know the code.
 
