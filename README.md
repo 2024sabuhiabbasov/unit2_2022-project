@@ -232,16 +232,92 @@ From the humidity and temperature that we have collected, we have generated a ma
 
 **Fig.9** The figure above shows the graph for the average of sensors for the temperature inside (local). The equation for this mathematical model is **y = 0.000123x<sup>2</sup>-0.006x+22.73** which is a quadratic equation.
 
+```.py
+values = []
+
+for s in sensors:
+    # get the sensors from the server
+    value = get_sensor(id=s)
+    # smooth the data with a size of 12 samples
+    x, smoothed_value = smoothing(data=value[0:490])
+    values.append(smoothed_value)
+
+mean_per_hour = []
+for i in range(len(values[0])):
+    # list comprehension
+    data = [values[n][i] for n in range(len(sensors))]
+    mean_per_hour.append(sum(data) / len(sensors))
+
+a1, b1, c1 = np.polyfit(x, mean_per_hour, 2)
+```
+**Code4** The code above shows how NumPy is being used to get the equation for the data. The mathematical model is a quadratic equation as the max degree is x to the power of two. The x-axis of the graph is represented as 'x' and the y-axis is 'mean_per_hour'. a1, b1, c1 represent the coefficient of each element of the equation from x to the power of 2,1,0 respectively.
+
 ![Average of sensors for Humidity Inside (1)](https://user-images.githubusercontent.com/112055062/207273226-d467f2c5-3e7a-4c4c-bd66-7cb0b9b17124.png)
 
 **Fig.10** The figure above shows the graph for the Average of Sensors for Humidity Inside(local). The equation for this mathematical model is **y=-0.0000083x<sup>2</sup>+0.003x+19.85** which is a quadratic equation.
 
 ![Temperature outside - line - equation](https://user-images.githubusercontent.com/112055062/207268274-3796c0f0-3e9d-4f4d-967b-4cb34e4ea383.png)
 
+```.py
+values = []
+
+# Get the data from the server
+for s in sensors:
+    # get the sensors from the server
+    value = get_sensor(id=s)
+    # smooth the data with a size of 12 samples
+    x, smoothed_value = smoothing(data=value[0:490])
+    values.append(smoothed_value)
+
+
+mean_per_hour = []
+for i in range(len(values[0])):
+    # list comprehension
+    data = [values[n][i] for n in range(len(sensors))]
+    mean_per_hour.append(sum(data) / len(sensors))
+
+a1, b1, c1 = np.polyfit(x, mean_per_hour, 2)
+```
+**Code5** The code above shows how the mathematical equation is being calculated by using the library NumPy. The x and y axis of the graph is x, and mean_per_hour respectively. The mathematical model is a quadratic equation with coefficients: a1,b1,c1. With the coefficients, the equation can be found. 
+
 **Fig.11** The figure above shows the graph for the Temperature Outside(remote) to the samples per hour. The equation for this mathematical model is a polynomial equation which is **y=-0.0000000017x<sup>3</sup>-000004.5x<sup>2</sup>-0.0007x+25.34**.
+
+```.py
+for i in range(len(Sensor_5)):
+    # list comprehension
+    data = [Sensor_5[i] for n in range(len(Sensor_5))]
+    mean_per_hour_outside_h.append(sum(data) / len(Sensor_5))
+
+for i in range(0, len(mean_per_hour_outside_h)):
+    sample.append(i)
+
+y = []
+a1, b1, c1, d1 = np.polyfit(sample, mean_per_hour_outside_h, 3)
+print(a1, b1, c1, d1)
+```
+**Code5** The code above shows how we used the NumPy library to get the equation. We generated the 2 lists for each axis in which the x-axis is 'sample' and the y-axis is 'mean_per_hour_outside_h. We then use NumPy to look for the coefficient of x to the power of 3,2,1,0 by naming a1,b1,c1,d1 respectively. The mathematical model is polynomial with degree 3, so we can find the equation from the 2 lists and the information that the model is a third degree polynomial.
 
 ![Humidity outside - line - equation](https://user-images.githubusercontent.com/112055062/207268303-b12d46f3-2a0e-40fd-b164-03ea6017dbe3.png)
 **Fig.12** The figure above shows the graph for the humidity outside(remote) to the samples per hour. The equation for this mathematical model is a polynomial equation which is **y=-0.0000000032x<sup>3</sup>+0.0001x<sup>2</sup>-0.002x+23.72**
+
+```.py
+sample = []  # empty list
+
+mean_per_hour_outside_h = []
+
+for i in range(len(Sensor_4)):
+    # list comprehension
+    data = [Sensor_4[i] for n in range(len(Sensor_4))]
+    mean_per_hour_outside_h.append(sum(data) / len(Sensor_4))
+
+for i in range(0, len(mean_per_hour_outside_h)):
+    sample.append(i)
+
+#Sensor_4 = Sensor_4[]
+y = []
+a1, b1, c1, d1 = np.polyfit(sample, mean_per_hour_outside_h, 3)
+```
+**Code6** The code above shows how the mathematical model for the humidity to the sample is by using NumPy. The two lists of x and y axis are sample and mean_per_hour_outside_h. The mathematical model is a 3rd degree polynomial. The equation is given by giving out the coefficients a1, b1, c1, d1 which forms the equation. 
 
 ## 4. The solution provides a comparative analysis for the Humidity and Temperature levels for each Local and Remote locations including mean, standad deviation, minimum, maximum, and median.
 
@@ -281,7 +357,7 @@ while True:
     time.sleep(300)
 ```
 
-**Code4** This is the code that is used to send the temperature and humidity which is being sent to the online API server http://192.168.6.142/readings every 5 minutes. We used the library Adafruit_DHT which is used with the DHT11 sensors. Then, we created a function called data_reader to return the temperature and humidity. The data is then sent to the server. To send the data to the server, we also need to have authorization using access token with a username and password. 
+**Code7** This is the code that is used to send the temperature and humidity which is being sent to the online API server http://192.168.6.142/readings every 5 minutes. We used the library Adafruit_DHT which is used with the DHT11 sensors. Then, we created a function called data_reader to return the temperature and humidity. The data is then sent to the server. To send the data to the server, we also need to have authorization using access token with a username and password. 
 
 
 <img width="1249" alt="data in server" src="https://user-images.githubusercontent.com/112055062/207038574-7ef259ff-d995-48d2-9738-f786076aecda.png">
@@ -315,7 +391,7 @@ for sample in readings:
         with open("Database_inside", "a") as file:
             file.write(f"{sample['datetime']},{sample['sensor_id']},{sample['value']}\n")
 ```
-**Code5** Shows the code of the data written into the CSV file
+**Code8** Shows the code of the data written into the CSV file
 
 ![csv image](https://user-images.githubusercontent.com/112055062/207231324-5e2b936e-f8dd-432e-beba-b46cc575bb10.png)
 **Fig.7** Shows the screenshot of the CSV file Database_inside
