@@ -109,9 +109,11 @@ For example, this data, {"value": 22.0, "id": 65010, "datetime": "2022-12-12T19:
 **Fig.6** Shows a section of the online API server http://192.168.6.142/readings where the data is being stored in real time every 5 minutes
 
 ## 2. Comma Separated Value File (CSV)
-The data is not only stored in the online server, but also in a comma separated value file which we created called "Database". The format of the data is the same as the one stored in the online server which provides the information of the value, id, datetime, and sensor id. 
+The data is not only stored in the online server, but also in a comma separated value file which we created called "Database_inside". The format of the data is organized to show the information of the datetime, the sensor id, and the value of either temperature of humidity. 
 
-**Fig.7** Shows a screenshot of the CSV file which stores the data
+![csv image](https://user-images.githubusercontent.com/112055062/207229610-c8bf7db0-0321-46a7-bd9c-5fd92ef6c091.png)
+
+**Fig.7** Shows a screenshot of the CSV file, Database_inside, which stores the data of
 
 # Criteria C: Development
 
