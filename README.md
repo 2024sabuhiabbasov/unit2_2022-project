@@ -21,8 +21,18 @@ We will create a device that monitors the temperature and the humidity inside th
 To provide a visual representation of the temperature and humidity values, we requested the data of the indoor sensor from the server which we have sent real time data every 5 minutes for 48 hours and the outdoor data from the same server. Then, we smoothed the data with a size window of 12 samples to eliminate the outliers for a more accurate result.  After we get the smoothed data from all sensors, we calculate the mean of the data from the 3 sensors.  The data is then merged into one list for each temperature and humidity outside and inside the residence. With the clean data, we use Matplotlib which is a plotting diagram library for Python to plot a graph that shows the relationship between the change in temperature/humidity and the number of samples.
 
 ![Average of sensors for Temperature-Humidity](https://user-images.githubusercontent.com/111758436/207184962-f6440ccb-76d1-4370-9889-da9b2ce8d5f9.png)
-3. ```[HL]``` The local variables will be measure using a set of 3 sensors around the dormitory.
-4. The solution provides a mathematical modelling for the Humidity and Temperature levels for each Local and Remote locations. ```(HL: non-linear model)```
+
+2. The local variables will be measured using a set of 3 sensors.
+
+To complete the criteria, we have 3 DHT11 sensors that are connected to a Raspberry pi 4 and each measure the temperature and humidity (see figure 7). We use 3 sensors to get more accurate data just in case one of the sensors is inaccurate the other two could lower the error margin. The measuring device is then placed indoors in the same residence as where Peter, the bird, lives, so the temperature, and humidity measurements are the most accurate and reliable.
+
+![image](https://user-images.githubusercontent.com/111758436/207186398-c8f94e5e-b90e-4b80-b995-1e4b7b392f07.png)
+![image](https://user-images.githubusercontent.com/111758436/207186588-a39a95ec-a9ba-40f2-9cfd-a218d14d0a29.png)
+
+3. The solution provides a mathematical modelling for the Humidity and Temperature levels for each Local and Remote locations.
+![Average of sensors for Temperature Inside](https://user-images.githubusercontent.com/111758436/207187630-950ef449-8a65-4b10-9fc3-0f0b17800d23.png)
+![Average of sensors for Humidity Inside](https://user-images.githubusercontent.com/111758436/207187983-2ec6a359-a2c6-47a2-88bf-9a78147fae57.png)
+
 5. The solution provides a comparative analysis for the Humidity and Temperature levels for each Local and Remote locations including mean, standad deviation, minimum, maximum, and median.
 6. ```(HL)```The Local samples are posted to the remote server.
 7. Create a prediction the subsequent 12 hours for both temperature and humidity.
