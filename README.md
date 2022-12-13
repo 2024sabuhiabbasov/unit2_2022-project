@@ -264,39 +264,15 @@ while True:
     time.sleep(300)
 ```
 
+**Code4** This is the code that is used to send the temperature and humidity which is being sent to the online API server http://192.168.6.142/readings every 5 minutes. We used the library Adafruit_DHT which is used with the DHT11 sensors. Then, we created a function called data_reader to return the temperature and humidity. The data is then sent to the server. To send the data to the server, we also need to have authorization using access token with a username and password. 
+
 
 <img width="1249" alt="data in server" src="https://user-images.githubusercontent.com/112055062/207038574-7ef259ff-d995-48d2-9738-f786076aecda.png">
 
 **Fig.6** Shows a section of the online API server http://192.168.6.142/readings where the data is being stored in real time every 5 minutes
 
-```.py
-import requests
-
-req = requests.get('http://192.168.6.142/readings')
-data = req.json()
-readings = data['readings'][0]
-
-for sample in readings:
-    if sample['sensor_id'] == 507:
-        with open("Database", "a") as file:
-            file.write(f"{sample}")
-    elif sample['sensor_id'] == 508:
-        with open("Database", "a") as file:
-            file.write(f"{sample}")
-    elif sample['sensor_id'] == 509:
-        with open("Database", "a") as file:
-            file.write(f"{sample}")
-    elif sample['sensor_id'] == 510:
-        with open("Database", "a") as file:
-            file.write(f"{sample}")
-    elif sample['sensor_id'] == 511:
-        with open("Database", "a") as file:
-            file.write(f"{sample}")
-    elif sample['sensor_id'] == 512:
-        with open("Database", "a") as file:
-            file.write(f"{sample}")
-```
 **Code1** Shows the code of the data being put into the CSV file. 
+
 ## 6.Create a prediction the subsequent 12 hours for both temperature and humidity.
 ## 7. A poster summarizing the visual representations, model and analysis is created. The poster includes a recommendation about healthy levels for Temperature and Humidity.
 
